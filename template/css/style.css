@@ -1,0 +1,316 @@
+/* ------------------------------------------------------------------------------------------
+ * Content
+ * ------------------------------------------------------------------------------------------ */
+
+
+
+
+
+#generator {
+	color: #b0b0b0;
+	border-top: 1px solid #ebebeb;
+	padding: 10px 0;
+}
+
+.label-optional {
+  float: right;
+}
+
+
+
+input[type="text"] {
+    border: none;
+    outline: none;
+    background: #fff;
+    width: 265px;
+    height: 34px;
+    margin: 0;
+    padding: 2px 7px;
+}
+
+.group-heading {
+    
+}
+.tab-content {
+    margin: 60px 10px 0px 20px;
+
+
+    float:left;
+}
+
+/*.sidenav > li > a {*/
+    /*display: block;*/
+    /*width: 192px;*/
+    /*margin: 0;*/
+    /*padding: 2px 11px;*/
+    /*border: 0;*/
+	/*border-left: transparent 4px solid;*/
+	/*border-right: transparent 4px solid;*/
+    /*color: #ffffff;*/
+	/*font-weight: 400;*/
+	/*font-size: 14px;*/
+/*}*/
+
+/*.sidenav > li.nav-header > a {*/
+    /*padding: 5px 15px;*/
+    /*border-bottom: 1px solid #e5e5e5;*/
+    /*width: 190px;*/
+	/*font-weight: 700;*/
+	/*font-size: 16px;*/
+    /*background: rgba(255,255,255,0.2);*/
+/*}*/
+
+/*.sidenav > li.nav-header.active > a {*/
+	/*background-color: #fff;*/
+/*}*/
+
+/*.sidenav > .active > a {*/
+  /*position: relative;*/
+  /*z-index: 2;*/
+/*}*/
+
+/*.sidenav > li > a:hover {*/
+  /*background-color: rgba(255,255,255,0.1);*/
+/*}*/
+
+/*.sidenav > li.has-modifications a {*/
+	/*border-right: #60d060 4px solid;*/
+/*}*/
+
+/*.sidenav > li.is-new a {*/
+	/*border-left: #e5e5e5 4px solid;*/
+/*}*/
+
+
+
+*,
+*:after,
+*::before {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body,
+.sd-container,
+.st-pusher,
+.st-content {
+    height: 100%;
+}
+
+.st-content {
+    overflow-y: scroll;
+    background: #f3efe0;
+}
+
+.st-content,
+.st-content-inner {
+    position: relative;
+}
+
+.pt-page-moveFromTop {
+  -webkit-animation: moveFromTop .6s ease both;
+  -moz-animation: moveFromTop .6s ease both;
+  animation: moveFromTop .6s ease both;
+}
+
+.pt-page-moveToBottomEasing {
+  -webkit-animation: moveToBottom .7s ease-in-out both;
+  -moz-animation: moveToBottom .7s ease-in-out both;
+  animation: moveToBottom .7s ease-in-out both;
+}
+
+.pt-page {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 60px;
+  visibility: hidden;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+@-webkit-keyframes fade-in{
+    from{
+        opacity:1;
+        top:0px;
+    }
+    to{
+        opacity:0;
+        top:-5px;
+    }
+}
+.text-animated-one{
+    display:inline;
+    position:relative;
+    top:0px;
+    -webkit-animation:fade-in 1s infinite;
+
+}
+.text-animated-two{
+    opacity:0;
+    display:inline;
+    position:relative;
+    margin-left:-56px;
+    -webkit-animation:fade-in 1s infinite;
+    -webkit-animation-delay:0.5s;
+}
+
+
+.pt-page-current {
+  visibility: visible;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  z-index: 1;
+}
+
+
+
+/********************************* keyframes **************************************/
+
+/* move from / to  */
+
+@-webkit-keyframes moveFromTop {
+  from { -webkit-transform: translateY(-100%); }
+}
+@-moz-keyframes moveFromTop {
+  from { -moz-transform: translateY(-100%); }
+}
+@keyframes moveFromTop {
+  from { transform: translateY(-100%); }
+}
+
+@-webkit-keyframes moveToBottom {
+  to { -webkit-transform: translateY(100%); }
+}
+@-moz-keyframes moveToBottom {
+  to { -moz-transform: translateY(100%); }
+}
+@keyframes moveToBottom {
+  to { transform: translateY(100%); }
+}
+
+
+.j6 {
+    width: 16.66%;
+}
+.st-pusher {
+    position: relative;
+    left: 0;
+    z-index: 99;
+    height: 100%;
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+}
+
+
+
+
+.st-pusher::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    background: rgba(0,0,0,0.2);
+    content: '';
+    opacity: 0;
+    -webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+    transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+}
+
+/*.sidenav-label {*/
+    /*position: fixed;*/
+    /*top: 0; left:0;*/
+
+    /*z-index: 500;*/
+    /*width: 50px;*/
+    /*height: 100%;*/
+/*}*/
+
+/*.sidenav-label .active {*/
+    /*border-left: 3px solid rgba(255,255,255,0.2);*/
+/*}*/
+
+/*.sidenav-label ul {*/
+  /*list-style: none;*/
+  /*height: 100%;*/
+  /*width: 50px;*/
+/*}*/
+/*.sidenav-label li{*/
+ /*line-height: 50px;*/
+/*position: relative;*/
+  /*height: 120px;*/
+  /*clear: left;*/
+/*}*/
+/*.sidenav-label ul li a {*/
+  /*display: block;*/
+  /*text-indent: -90%;  */
+  /*font-size: 20px;*/
+  /*width: 100%;*/
+
+ /*line-height: 50px;*/
+  /*-webkit-transform: rotate(-90deg);*/
+  /*-moz-transform: rotate(-90deg);*/
+  /*-ms-transform: rotate(-90deg);*/
+  /*-o-transform: rotate(-90deg);*/
+  /*transform: rotate(-90deg);*/
+
+  /* also accepts left, right, top, bottom coordinates; not required, but a good idea for styling */
+  /*-webkit-transform-origin: 50% 50%;*/
+  /*-moz-transform-origin: 50% 50%;*/
+  /*-ms-transform-origin: 50% 50%;*/
+  /*-o-transform-origin: 50% 50%;*/
+  /*transform-origin: 50% 50%;*/
+
+  /* Should be unset in IE9+ I think. */
+  /*filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);*/
+/*}*/
+
+
+
+/* ------------------------------------------------------------------------------------------
+ * Compare
+ * ------------------------------------------------------------------------------------------ */
+
+
+.nav>li>a {
+    padding: 0;
+    margin: 0;
+    font-size:12px;
+}
+
+/*.nav-pills>li>a, .nav-pills>li>a:hover, .nav-pills>li>a:focus {
+    background-color: rgba(255,255,255,0.5);
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
+    background-color: rgba(255,255,255,0.95);
+}
+*/
+#project {
+    clear: both;
+}
+.filter-nib {
+    position: fixed;
+    display: inline-block;
+    padding-left: .75em;
+    text-align: left;
+    border-radius: 0 .25em .25em 0;}
+
+
+.fa {
+    color:rgba(0,0,0,1)
+}
+
