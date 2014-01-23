@@ -1,4 +1,4 @@
-#![sassdocJs](http://sassdocjs.com/sassdocjs.png)
+#![sassdocJs](http://sassdocjs.com/sassdocjs-g.png)
 
 ## Getting Started
 
