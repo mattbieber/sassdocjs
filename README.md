@@ -1,7 +1,5 @@
 #![sassdocJs](http://sassdocjs.com/sassdocjs-g.png)
 
-## Getting Started
-
 sassdocJs is a [nodejs][1] command-line (CLI) app that will parse [jsDoc][2] style comments* found in your `.scss` source files, and use them to create a structured set of Html-based documentation. It's aim is to provide an easy way to catalog your growing library of sass mixins, functions, placeholders, etc, while complimenting whatever workflow, or Sass/Css/OOCSS standardization you may have adopted.   
  
 I've tried to keep things extensible: there's a default set of 'language definitions', such as `@mixin`, `%placeholder`, or `#id`, but it's simple to construct custom definitions. A theme-able Html/Handlebars.js template is included. Finally, the parsed documentation result is saved as plain JSON, so you can easily work it into whatever front-end you fancy. 
