@@ -1,0 +1,27 @@
+{
+    "buffer": [],
+    "items": {
+        "": {
+            "id": 1,
+            "kind": "extends",
+            "type": "",
+            "name": "",
+            "description": "%l-cleared-container",
+            "src": "@extends %l-cleared-container",
+            "paraminfo": {},
+            "context": 0
+        }
+    },
+    "id": "",
+    "typeName": "SassDoclet",
+    "kind": "placeholder",
+    "doclet_id": "test01.scss.9",
+    "filename": "test01.scss",
+    "lineno": 74,
+    "expectedItemCount": 1,
+    "raw": [
+        "",
+        "description for m-listitem-base.",
+        "@extends %l-cleared-container"
+    ]
+}

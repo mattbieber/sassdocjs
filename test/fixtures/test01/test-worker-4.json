@@ -1,0 +1,19 @@
+{
+    "buffer": [],
+    "items": [],
+    "id": "test01.scss.4",
+    "typeName": "SassDoclet",
+    "name": "default-sprite",
+    "kind": "var",
+    "filename": "test01.scss",
+    "lineno": 13,
+    "expectedItemCount": 1,
+    "description": "default sprite file to use",
+    "prefix": null,
+    "raw": [
+        " @var {String} default sprite file to use "
+    ],
+    "sass": "$default-sprite:                        $icon-sprite;",
+    "type": "String",
+    "context": 1
+}

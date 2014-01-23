@@ -1,0 +1,68 @@
+{
+    "buffer": [],
+    "items": [
+        {
+            "id": 1,
+            "kind": "param",
+            "type": "String",
+            "name": "$item-position",
+            "description": "acceptable values are horizontal or vertical",
+            "src": "@param     $item-position {String} acceptable values are horizontal or vertical",
+            "paraminfo": {}
+        },
+        {
+            "id": 4,
+            "kind": "param",
+            "type": "Number",
+            "name": "$sprite-width",
+            "description": "optional if supplied this should be the number of total elements",
+            "src": "@param     $sprite-width {Number} optional if supplied this should be the number of total elements",
+            "paraminfo": {}
+        },
+        {
+            "id": 5,
+            "kind": "param",
+            "type": "Bool",
+            "name": "$sprite-height",
+            "description": "use float vs. inline-block",
+            "src": "@param     $sprite-height {Bool} use float vs. inline-block",
+            "paraminfo": {}
+        },
+        {
+            "id": 6,
+            "kind": "example",
+            "type": "",
+            "name": "",
+            "description": "background: sprite(24px, gray, mapicon);\n&:hover {\nbackground: sprite(24px, orange, mapicon);\n}\n",
+            "src": "@example",
+            "paraminfo": {}
+        }
+    ],
+    "id": "test01.scss.7",
+    "typeName": "SassDoclet",
+    "name": "sprite",
+    "kind": "mixin",
+    "filename": "test01.scss",
+    "lineno": 36,
+    "expectedItemCount": 6,
+    "description": "mixin for creating horizontal or vertical list of items\ne.g. floated DIV or LI elemenents for navigation or grouping\n",
+    "prefix": null,
+    "raw": [
+        "",
+        "mixin for creating horizontal or vertical list of items",
+        "e.g. floated DIV or LI elemenents for navigation or grouping",
+        "",
+        "@param     $item-position {String} acceptable values are horizontal or vertical",
+        "@param     $style-position {Number} margin to apply to right (horizontal) or bottom (vertical)",
+        "@param     $image-file {Number} optional width",
+        "@param     $sprite-width {Number} optional if supplied this should be the number of total elements",
+        "@param     $sprite-height {Bool} use float vs. inline-block",
+        "@example",
+        "  background: sprite(24px, gray, mapicon);",
+        "  &:hover {",
+        "    background: sprite(24px, orange, mapicon);",
+        "  }"
+    ],
+    "sass": "@mixin sprite($item-position: 0,\n              $style-position: 0,\n              $image-file: $default-sprite,\n              $sprite-width:  $default-sprite-element-width,\n              $sprite-height: $default-sprite-element-height)\n{\n  $pos-x: -1 * ($style-position * $sprite-width);\n  $pos-y: -1 * ($item-position * $sprite-height);\n\n  @debug $pos-x;\n  @debug $pos-y;\n\n  background: $image-file $pos-x $pos-y;\n\n}",
+    "context": 0
+}

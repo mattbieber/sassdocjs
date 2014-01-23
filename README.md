@@ -14,6 +14,10 @@ I've tried to keep things extensible: there's a default set of 'language definit
    [2]: http://usejsdoc.org
    [3]: http://http://smacss.com
 
+Website/Demo: [sassdocjs.com][sd2]
+
+  [sd2]: http://sassdocjs.com
+
 \*currently not `//` comments - see *known issues* below.
 
 ## Installation
@@ -211,6 +215,3 @@ Licensed under the [MIT License (MIT)][lic]
 Website: [sassdocjs.com][sd]
   
   [sd]: http://sassdocjs.com
-
-            
-            

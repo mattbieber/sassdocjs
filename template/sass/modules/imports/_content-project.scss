@@ -1,0 +1,33 @@
+.l-section-project {
+	padding-bottom: 30px;
+	margin-bottom: 20px;
+}
+
+.m-section-project {
+    border-bottom: 1px solid $color-accent-alt;
+}
+
+.m-project-name {
+    color: $color-default-alpha;
+    font: font-config($font-head-size, $font-head-weight, $family: $font-head-family);
+
+    @include at-size($l) {
+        font-size: $font-head-size * 0.75;
+    }
+}
+
+.m-project-header {
+    overflow: hidden;
+    width: 85%;
+}
+.m-project-header img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 20px;
+}
+
+.m-project-description {
+    font: font-config($font-subhead-size, $font-subhead-weight, $family: $font-subhead-family);
+    clear: both;
+}
+

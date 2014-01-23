@@ -1,0 +1,168 @@
+/* ==|=======================================================================
+   modules.nav.header
+   ========================================================================== */
+
+$header-nav-spacing: 2.8em;
+$header-nav-itemcount: 6;
+$header-nav-itemwidth: 16.66%;
+$header-mobilenav-width: 260px;
+$header-height: 168px;
+$header-banner-height: 101px;
+$header-banner-height-m: 76px;
+$header-banner-mobilenavicon-height: 37px;
+$header-nav-submenu-width: 280px;
+
+/*
+ LOGO
+ ------------------------------------ */
+.l-nav-menu ul {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+.l-nav-menu li {
+    max-height: 120px;
+    position: relative;
+}
+.l-nav-menu li span {
+    display: block;
+}
+.l-nav-menu li .border {
+    position: absolute;
+    top:0;
+    left:0;
+    visibility: hidden;
+    height: 100%;
+    width:4px;
+    background: rgba(249, 249, 249, .2);
+    z-index: 999;
+
+}
+.l-nav-menu .label {
+    font-size: 60%;
+}
+
+.l-nav-menu a {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    color: rgba(249, 249, 249, .9);
+    -webkit-transition: color .5s, background .5s, height .5s;
+    -moz-transition: color .5s, background .5s, height .5s;
+    -o-transition: color .5s, background .5s, height .5s;
+    -ms-transition: color .5s, background .5s, height .5s;
+    transition: color .5s, background .5s, height .5s;
+}
+
+
+
+.no-touch .l-nav-menu ul:hover a {
+    color: rgba(249, 249, 249, .5);
+}
+
+.no-touch .l-nav-menu ul:hover a:hover {
+    color: rgba(249, 249, 249, 0.99);
+}
+
+/* Adding some background color to the different menu items */
+
+.l-nav-menu li {
+    background: $color-a;
+}
+
+.l-nav-menu li:nth-of-type(odd) {
+    background: $color-a-beta;
+}
+
+.l-nav-menu a.active {
+    background: $color-toc-bg;
+}
+/* For screen bigger than 800px */
+@media (min-width: 50em) {
+
+    /* Transforms the list into a horizontal navigation */
+    .l-nav-menu li {
+        
+        width: 100%;
+        text-align: center;
+        -webkit-transition: border .5s;
+        -moz-transition: border .5s;
+        -o-transition: border .5s;
+        -ms-transition: border .5s;
+        transition: border .5s;
+    }
+
+    .l-nav-menu a {
+        display: block;
+        width: auto;
+    }
+
+    /* hover, focused and active effects that add a little colored border to the different items */
+    .no-touch .l-nav-menu a:hover,
+    .no-touch .l-nav-menu a:active,
+    .no-touch .l-nav-menu a:focus {
+        .border {
+            visibility: visible;
+        }
+        
+    }
+
+
+    /* Placing the icon */
+
+    .icon {
+        padding-top: 0.9em;
+    }
+
+    .icon + span {
+        margin-top: -200px;
+        -webkit-transition: margin .5s;
+        -moz-transition: margin .5s;
+        -o-transition: margin .5s;
+        -ms-transition: margin .5s;
+        transition: margin .5s;
+    }
+
+    /* Animating the height of the element*/
+    .l-nav-menu a {
+        overflow: hidden;
+        height: 120px;
+    }
+
+
+    .l-nav-menu a:hover .icon {
+        margin-top: -20px;
+        font-size: 80%;
+        -webkit-transition: all .1s;
+        -moz-transition: all .1s;
+        -o-transition: all .1s;
+        -ms-transition: all .1s;
+        transition: all .1s;
+    }
+    /* Making the text follow the height animation */
+    .l-nav-menu a:hover .icon + span {
+        margin-top: 10px;
+        -webkit-transition: margin .5s;
+        -moz-transition: margin .5s;
+        -o-transition: margin .5s;
+        -ms-transition: margin .5s;
+        transition: margin .5s;
+    }
+
+    /* Positioning the icons and preparing for the animation*/
+    .l-nav-menu i {
+        position: relative;
+        display: inline-block;
+        margin: 0 auto;
+        padding: 0.4em;
+        font-size: 1.8em;
+        //background: rgba(255,255,255,0.1);
+    }
+
+}
+
+

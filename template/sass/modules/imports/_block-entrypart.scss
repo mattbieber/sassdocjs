@@ -1,0 +1,49 @@
+/* ==|=======================================================================
+   modules.blocks.section
+   ========================================================================== */
+
+
+.m-entry-part {
+    width:  100%;
+    margin: 10px 0px;
+    clear: left;
+    @include at-size($s) {
+        margin-bottom: 20px;
+    }
+
+
+    h3 {
+        font: font-config(1.6em, $font-copy-strong, $family: $font-subhead-family);
+        margin: 10px 0px;
+    }
+
+    .table {
+        width: 80%;
+        thead {
+            border-bottom: 2px solid $color-a-epsilon;
+        }
+
+        th {
+            font-weight: $font-copy-strong;
+        }
+        th,td {
+            text-align: left;
+        }
+
+        .line-name { width: 20%; }
+        .line-type { width: 30%; }
+        .line-description { width: 50%; }
+
+    }
+
+}
+
+.typekind {
+    .String { color: $color-a; }
+    .Number { color: $color-b; }
+    .Bool { color: $color-c; }
+    .Object { color: $color-e; }
+    .Color { color: $color-a; }
+    .Style { color: $color-c; }
+               
+}

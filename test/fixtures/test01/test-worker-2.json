@@ -1,0 +1,19 @@
+{
+    "buffer": [],
+    "items": [],
+    "id": "test01.scss.2",
+    "typeName": "SassDoclet",
+    "name": "icon-sprite",
+    "kind": "var",
+    "filename": "test01.scss",
+    "lineno": 7,
+    "expectedItemCount": 1,
+    "description": "backround image path to sprite file",
+    "prefix": null,
+    "raw": [
+        " @var {String} backround image path to sprite file "
+    ],
+    "sass": "$icon-sprite:                           url('/images/sprite.png') no-repeat;",
+    "type": "String",
+    "context": 1
+}

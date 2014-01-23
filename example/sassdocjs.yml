@@ -1,0 +1,21 @@
+default: 
+  project: 
+    name: sassdocJs Example
+    logo: "http://sassdocjs.com/example1.png"
+    description: ""
+    version: 0.1.2
+    authors: "Matt Bieber<matt@daftscholars.com>"
+    contributors: ""
+    status: In Testing
+  files: 
+    exclude: ""
+    include: ".*\\.scss$"
+    out: ./doc
+    templ: /Users/Matt/Google Drive/Development/sassdocjs/template/build/
+    recurse: false
+  run: 
+    prefix: true
+    log: true
+    verbosity: 2
+    config: true
+    limit: 4

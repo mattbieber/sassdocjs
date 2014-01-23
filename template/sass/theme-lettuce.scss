@@ -1,0 +1,69 @@
+/*
+ * Site:       sassdocjs template
+ * Inspired by SMACSS http://smacss.com
+ */
+
+@charset "UTF-8";
+
+/**
+ * VENDOR..............sass-ref frameworks, plugin css, etc
+ * BASE................global mixins/functions, reset.css
+ * APP.................config, default colors, breakpoints, etc
+ * TYPOGRAPHY..........fonts, headings, anything type related
+ * FORMS...............form elements, buttons, etc
+ * LAYOUT..............top level layout, html, body, header, footer, viewport
+ * MODULES.............app-specific objects
+ * !IMPORTANT..........overrides (hack?)
+ */
+
+// fonts
+@import url(http://fonts.googleapis.com/css?family=Cutive+Mono|Cutive|Open+Sans+Condensed:700|Open+Sans:400,300,600,700);
+
+$font-head-family:                      'Cutive', 'Arial', sans-serif;
+$font-head-weight:                      400;
+$font-head-size:                        300%;
+
+$font-subhead-family:                   'Open Sans Condensed', sans-serif;;
+$font-subhead-weight:                   700;
+$font-subhead-size:                     140%;
+
+$font-copy-family:                      'Open Sans', sans-serif;;
+$font-copy-weight:                      300;
+$font-copy-size:                        16px;
+$font-copy-strong:                      600;
+
+
+$font-code-family:                      'Cutive Mono', monospace, serif;
+$font-code-weight:                      400;
+$font-code-size:                        15px;
+
+$copy-line-height:                      24px;
+// colors
+$palette-default:                       rgba(13,13,13,1.0);
+$palette-inverse:                       rgba(255,255,255,1.0);
+
+$palette-a:                             rgba(71,182,118,1.0);
+$palette-b:                             rgba(39,174,97,1.0);
+$palette-c:                             rgba(45,172,116,1.0);
+
+$palette-d:                             rgba(141,110,87,1.0);
+$palette-e:                             rgba(185,64,63,1.0);
+
+// base
+@import "config";
+@import "base/_extensions";
+@import "base/_base";
+
+// typography
+@import "typography/_extensions";
+@import "typography/_fonts";
+@import "typography/_typography";
+
+// layout
+@import "layout/_extensions";
+@import "layout/_layouts";
+
+// modules
+@import "modules/_extensions";
+@import "modules/_modules";
+

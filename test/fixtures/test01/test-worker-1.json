@@ -1,0 +1,20 @@
+{
+    "buffer": [],
+    "items": [],
+    "id": "test01.scss.1",
+    "typeName": "SassDoclet",
+    "name": "fixtures/test01.scss",
+    "kind": "module",
+    "filename": "test01.scss",
+    "lineno": 5,
+    "expectedItemCount": 1,
+    "description": "Test fixture for sassdocjs tests\n",
+    "prefix": null,
+    "raw": [
+        "",
+        "Test fixture for sassdocjs tests",
+        "@module fixtures/test01.scss"
+    ],
+    "sass": [],
+    "context": 1
+}

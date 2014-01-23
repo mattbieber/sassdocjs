@@ -1,0 +1,597 @@
+{
+    "items": [
+        {
+            "_id": "test01.scss.1",
+            "_filename": "test01.scss",
+            "_lineno": 5,
+            "_prefix": null,
+            "_description": "Test fixture for sassdocjs tests\n",
+            "_kind": null,
+            "_itemcount": 1,
+            "_items": [
+                {
+                    "id": 1,
+                    "kind": "module",
+                    "type": "",
+                    "name": "fixtures/test01.scss",
+                    "description": "",
+                    "src": "@module fixtures/test01.scss",
+                    "paraminfo": {}
+                }
+            ],
+            "_sass": [
+                "",
+                "/** @var {String} backround image path to sprite file */"
+            ],
+            "_raw": {
+                "filename": "test01.scss",
+                "lineno": 5,
+                "data": [
+                    "",
+                    "Test fixture for sassdocjs tests",
+                    "@module fixtures/test01.scss"
+                ]
+            }
+        },
+        {
+            "_id": "test01.scss.2",
+            "_filename": "test01.scss",
+            "_lineno": 7,
+            "_prefix": null,
+            "_description": "",
+            "_kind": "var",
+            "_itemcount": 1,
+            "_items": [
+                {
+                    "id": 1,
+                    "kind": "var",
+                    "type": "String",
+                    "name": "",
+                    "description": "backround image path to sprite file",
+                    "src": "@var {String} backround image path to sprite file",
+                    "paraminfo": {}
+                }
+            ],
+            "_sass": [
+                "$icon-sprite:                           url('/images/sprite.png') no-repeat;",
+                "",
+                "/** @var {Number} number of sprites to expect in file */"
+            ],
+            "_raw": {
+                "filename": "test01.scss",
+                "lineno": 7,
+                "data": [
+                    " @var {String} backround image path to sprite file "
+                ]
+            },
+            "_name": "icon-sprite:"
+        },
+        {
+            "_id": "test01.scss.3",
+            "_filename": "test01.scss",
+            "_lineno": 10,
+            "_prefix": null,
+            "_description": "",
+            "_kind": "var",
+            "_itemcount": 1,
+            "_items": [
+                {
+                    "id": 1,
+                    "kind": "var",
+                    "type": "Number",
+                    "name": "",
+                    "description": "number of sprites to expect in file",
+                    "src": "@var {Number} number of sprites to expect in file",
+                    "paraminfo": {}
+                }
+            ],
+            "_sass": [
+                "$sprite-count:                          23;",
+                "",
+                "/** @var {String} default sprite file to use */"
+            ],
+            "_raw": {
+                "filename": "test01.scss",
+                "lineno": 10,
+                "data": [
+                    " @var {Number} number of sprites to expect in file "
+                ]
+            },
+            "_name": "sprite-count:"
+        },
+        {
+            "_id": "test01.scss.4",
+            "_filename": "test01.scss",
+            "_lineno": 13,
+            "_prefix": null,
+            "_description": "",
+            "_kind": "var",
+            "_itemcount": 1,
+            "_items": [
+                {
+                    "id": 1,
+                    "kind": "var",
+                    "type": "String",
+                    "name": "",
+                    "description": "default sprite file to use",
+                    "src": "@var {String} default sprite file to use",
+                    "paraminfo": {}
+                }
+            ],
+            "_sass": [
+                "$default-sprite:                        $icon-sprite;",
+                "",
+                "/** @var {Number} with of sprited elements */"
+            ],
+            "_raw": {
+                "filename": "test01.scss",
+                "lineno": 13,
+                "data": [
+                    " @var {String} default sprite file to use "
+                ]
+            },
+            "_name": "default-sprite:"
+        },
+        {
+            "_id": "test01.scss.5",
+            "_filename": "test01.scss",
+            "_lineno": 16,
+            "_prefix": null,
+            "_description": "",
+            "_kind": "var",
+            "_itemcount": 1,
+            "_items": [
+                {
+                    "id": 1,
+                    "kind": "var",
+                    "type": "Number",
+                    "name": "",
+                    "description": "with of sprited elements",
+                    "src": "@var {Number} with of sprited elements",
+                    "paraminfo": {}
+                }
+            ],
+            "_sass": [
+                "$default-sprite-element-width:          $icon-sprite-element-width;",
+                "",
+                "/** @var {Number} height of sprited elements */"
+            ],
+            "_raw": {
+                "filename": "test01.scss",
+                "lineno": 16,
+                "data": [
+                    " @var {Number} with of sprited elements "
+                ]
+            },
+            "_name": "default-sprite-element-width:"
+        },
+        {
+            "_id": "test01.scss.6",
+            "_filename": "test01.scss",
+            "_lineno": 19,
+            "_prefix": null,
+            "_description": "",
+            "_kind": "var",
+            "_itemcount": 1,
+            "_items": [
+                {
+                    "id": 1,
+                    "kind": "var",
+                    "type": "Number",
+                    "name": "",
+                    "description": "height of sprited elements",
+                    "src": "@var {Number} height of sprited elements",
+                    "paraminfo": {}
+                }
+            ],
+            "_sass": [
+                "$default-sprite-element-height:         $icon-sprite-element-height;",
+                "",
+                "/**",
+                "* mixin for creating horizontal or vertical list of items",
+                "* e.g. floated DIV or LI elemenents for navigation or grouping",
+                "*",
+                "* @param     $item-position {String} acceptable values are horizontal or vertical"
+            ],
+            "_raw": {
+                "filename": "test01.scss",
+                "lineno": 19,
+                "data": [
+                    " @var {Number} height of sprited elements "
+                ]
+            },
+            "_name": "default-sprite-element-height:"
+        },
+        {
+            "_id": "test01.scss.7",
+            "_filename": "test01.scss",
+            "_lineno": 36,
+            "_prefix": null,
+            "_description": "mixin for creating horizontal or vertical list of items\ne.g. floated DIV or LI elemenents for navigation or grouping\n",
+            "_kind": "mixin",
+            "_itemcount": 6,
+            "_items": [
+                {
+                    "id": 1,
+                    "kind": "param",
+                    "type": "String",
+                    "name": "$item-position",
+                    "description": "acceptable values are horizontal or vertical",
+                    "src": "@param     $item-position {String} acceptable values are horizontal or vertical",
+                    "paraminfo": {}
+                },
+                {
+                    "id": 2,
+                    "kind": "param",
+                    "type": "Number",
+                    "name": "$style-position",
+                    "description": "margin to apply to right (horizontal) or bottom (vertical)",
+                    "src": "@param     $style-position {Number} margin to apply to right (horizontal) or bottom (vertical)",
+                    "paraminfo": {}
+                },
+                {
+                    "id": 3,
+                    "kind": "param",
+                    "type": "Number",
+                    "name": "$image-file",
+                    "description": "optional width",
+                    "src": "@param     $image-file {Number} optional width",
+                    "paraminfo": {}
+                },
+                {
+                    "id": 4,
+                    "kind": "param",
+                    "type": "Number",
+                    "name": "$sprite-width",
+                    "description": "optional if supplied this should be the number of total elements",
+                    "src": "@param     $sprite-width {Number} optional if supplied this should be the number of total elements",
+                    "paraminfo": {}
+                },
+                {
+                    "id": 5,
+                    "kind": "param",
+                    "type": "Bool",
+                    "name": "$sprite-height",
+                    "description": "use float vs. inline-block",
+                    "src": "@param     $sprite-height {Bool} use float vs. inline-block",
+                    "paraminfo": {}
+                },
+                {
+                    "id": 6,
+                    "kind": "example",
+                    "type": "",
+                    "name": "",
+                    "description": "background: sprite(24px, gray, mapicon);\n&:hover {\nbackground: sprite(24px, orange, mapicon);\n}\n",
+                    "src": "@example",
+                    "paraminfo": {}
+                }
+            ],
+            "_sass": [
+                "@mixin sprite($item-position: 0,",
+                "              $style-position: 0,",
+                "              $image-file: $default-sprite,",
+                "              $sprite-width:  $default-sprite-element-width,",
+                "              $sprite-height: $default-sprite-element-height)",
+                "{",
+                "  $pos-x: -1 * ($style-position * $sprite-width);",
+                "  $pos-y: -1 * ($item-position * $sprite-height);",
+                "",
+                "  @debug $pos-x;",
+                "  @debug $pos-y;",
+                "",
+                "  background: $image-file $pos-x $pos-y;",
+                "",
+                "}"
+            ],
+            "_raw": {
+                "filename": "test01.scss",
+                "lineno": 36,
+                "data": [
+                    "",
+                    "mixin for creating horizontal or vertical list of items",
+                    "e.g. floated DIV or LI elemenents for navigation or grouping",
+                    "",
+                    "@param     $item-position {String} acceptable values are horizontal or vertical",
+                    "@param     $style-position {Number} margin to apply to right (horizontal) or bottom (vertical)",
+                    "@param     $image-file {Number} optional width",
+                    "@param     $sprite-width {Number} optional if supplied this should be the number of total elements",
+                    "@param     $sprite-height {Bool} use float vs. inline-block",
+                    "@example",
+                    "  background: sprite(24px, gray, mapicon);",
+                    "  &:hover {",
+                    "    background: sprite(24px, orange, mapicon);",
+                    "  }"
+                ]
+            },
+            "_name": "sprite"
+        },
+        {
+            "_id": "test01.scss.8",
+            "_filename": "test01.scss",
+            "_lineno": 63,
+            "_prefix": null,
+            "_description": "Creates a repeated border from an image\n",
+            "_kind": "mixin",
+            "_itemcount": 5,
+            "_items": [
+                {
+                    "id": 1,
+                    "kind": "param",
+                    "type": "String",
+                    "name": "$location",
+                    "description": "acceptable values are horizontal or vertical",
+                    "src": "@param      $location {String} acceptable values are horizontal or vertical",
+                    "paraminfo": {}
+                },
+                {
+                    "id": 2,
+                    "kind": "param",
+                    "type": "String|Color",
+                    "name": "$color",
+                    "description": "a string or hex/rgba color value to use for the border",
+                    "src": "@param      $color {String|Color} a string or hex/rgba color value to use for the border",
+                    "paraminfo": {}
+                },
+                {
+                    "id": 3,
+                    "kind": "param",
+                    "type": "String",
+                    "name": "$background-image",
+                    "description": "a background image url",
+                    "src": "@param      $background-image {String} a background image url",
+                    "paraminfo": {}
+                },
+                {
+                    "id": 4,
+                    "kind": "returns",
+                    "type": "Style",
+                    "name": "",
+                    "description": "bordered left content",
+                    "src": "@returns {Style} bordered left content",
+                    "paraminfo": {}
+                },
+                {
+                    "id": 5,
+                    "kind": "example",
+                    "type": "",
+                    "name": "",
+                    "description": "makeborder($lastname: something);\n",
+                    "src": "@example",
+                    "paraminfo": {}
+                }
+            ],
+            "_sass": [
+                "@function makeborder($location,",
+                "                     $color: transparent,",
+                "                     $background-image: none)",
+                "{",
+                "  @return $color $background-image repeat-x $location;",
+                "}"
+            ],
+            "_raw": {
+                "filename": "test01.scss",
+                "lineno": 63,
+                "data": [
+                    "",
+                    "Creates a repeated border from an image",
+                    "",
+                    "@param      $location {String} acceptable values are horizontal or vertical",
+                    "@param      $color {String|Color} a string or hex/rgba color value to use for the border",
+                    "@param      $background-image {String} a background image url",
+                    "",
+                    "@returns {Style} bordered left content",
+                    "@example",
+                    "  makeborder($lastname: something);"
+                ]
+            },
+            "_name": "makeborder"
+        },
+        {
+            "_id": "test01.scss.9",
+            "_filename": "test01.scss",
+            "_lineno": 74,
+            "_prefix": null,
+            "_description": "description for m-listitem-base.\n",
+            "_kind": "placeholder",
+            "_itemcount": 1,
+            "_items": [
+                {
+                    "id": 1,
+                    "kind": "extends",
+                    "type": "",
+                    "name": "",
+                    "description": "%l-cleared-container",
+                    "src": "@extends %l-cleared-container",
+                    "paraminfo": {}
+                }
+            ],
+            "_sass": [
+                "%m-listitem-base {",
+                "  @extend %l-cleared-container;",
+                "  width: 100%;",
+                "  h3 {",
+                "    margin: 12px 0px 10px 0px;",
+                "    text-transform: uppercase;",
+                "    font: fontconfig(22px, 400);",
+                "  }",
+                "}"
+            ],
+            "_raw": {
+                "filename": "test01.scss",
+                "lineno": 74,
+                "data": [
+                    "",
+                    "description for m-listitem-base.",
+                    "@extends %l-cleared-container"
+                ]
+            },
+            "_name": "m-listitem-base"
+        },
+        {
+            "_id": "test01.scss.10",
+            "_filename": "test01.scss",
+            "_lineno": 87,
+            "_prefix": null,
+            "_description": "description poop stuff it does\n",
+            "_kind": "class",
+            "_itemcount": 0,
+            "_items": [],
+            "_sass": [
+                ".m-listitem-location {",
+                "  font: swt-fontconfig(72%, 600);",
+                "  margin-top: 8px;",
+                "}"
+            ],
+            "_raw": {
+                "filename": "test01.scss",
+                "lineno": 87,
+                "data": [
+                    "",
+                    "description poop stuff it does"
+                ]
+            },
+            "_name": "m-listitem-location"
+        },
+        {
+            "_id": "test01.scss.11",
+            "_filename": "test01.scss",
+            "_lineno": 96,
+            "_prefix": null,
+            "_description": "description poop stuff it does\n",
+            "_kind": "id",
+            "_itemcount": 1,
+            "_items": [
+                {
+                    "id": 1,
+                    "kind": "extends",
+                    "type": "",
+                    "name": "",
+                    "description": "%swm-ul-navigation",
+                    "src": "@extends %swm-ul-navigation",
+                    "paraminfo": {}
+                }
+            ],
+            "_sass": [
+                "#menu-links {",
+                "  @extend %swm-ul-navigation;",
+                "  position: absolute;",
+                "  bottom:8px;",
+                "  left: 294px;",
+                "}"
+            ],
+            "_raw": {
+                "filename": "test01.scss",
+                "lineno": 96,
+                "data": [
+                    "",
+                    "description poop stuff it does",
+                    "@extends %swm-ul-navigation"
+                ]
+            },
+            "_name": "menu-links"
+        }
+    ],
+    "buffer": [
+        "/**",
+        "* Test fixture for sassdocjs tests",
+        "* @module fixtures/test01.scss",
+        "*/",
+        "",
+        "/** @var {String} backround image path to sprite file */",
+        "$icon-sprite:                           url('/images/sprite.png') no-repeat;",
+        "",
+        "/** @var {Number} number of sprites to expect in file */",
+        "$sprite-count:                          23;",
+        "",
+        "/** @var {String} default sprite file to use */",
+        "$default-sprite:                        $icon-sprite;",
+        "",
+        "/** @var {Number} with of sprited elements */",
+        "$default-sprite-element-width:          $icon-sprite-element-width;",
+        "",
+        "/** @var {Number} height of sprited elements */",
+        "$default-sprite-element-height:         $icon-sprite-element-height;",
+        "",
+        "/**",
+        "* mixin for creating horizontal or vertical list of items",
+        "* e.g. floated DIV or LI elemenents for navigation or grouping",
+        "*",
+        "* @param     $item-position {String} acceptable values are horizontal or vertical",
+        "* @param     $style-position {Number} margin to apply to right (horizontal) or bottom (vertical)",
+        "* @param     $image-file {Number} optional width",
+        "* @param     $sprite-width {Number} optional if supplied this should be the number of total elements",
+        "* @param     $sprite-height {Bool} use float vs. inline-block",
+        "* @example",
+        "*   background: sprite(24px, gray, mapicon);",
+        "*   &:hover {",
+        "*     background: sprite(24px, orange, mapicon);",
+        "*   }",
+        "*/",
+        "@mixin sprite($item-position: 0,",
+        "              $style-position: 0,",
+        "              $image-file: $default-sprite,",
+        "              $sprite-width:  $default-sprite-element-width,",
+        "              $sprite-height: $default-sprite-element-height)",
+        "{",
+        "  $pos-x: -1 * ($style-position * $sprite-width);",
+        "  $pos-y: -1 * ($item-position * $sprite-height);",
+        "",
+        "  @debug $pos-x;",
+        "  @debug $pos-y;",
+        "",
+        "  background: $image-file $pos-x $pos-y;",
+        "",
+        "}",
+        "",
+        "/**",
+        "* Creates a repeated border from an image",
+        "*",
+        "* @param      $location {String} acceptable values are horizontal or vertical",
+        "* @param      $color {String|Color} a string or hex/rgba color value to use for the border",
+        "* @param      $background-image {String} a background image url",
+        "*",
+        "* @returns {Style} bordered left content",
+        "* @example",
+        "*   makeborder($lastname: something);",
+        "*/",
+        "@function makeborder($location,",
+        "                     $color: transparent,",
+        "                     $background-image: none)",
+        "{",
+        "  @return $color $background-image repeat-x $location;",
+        "}",
+        "",
+        "/**",
+        "* description for m-listitem-base.",
+        "* @extends %l-cleared-container",
+        "*/",
+        "%m-listitem-base {",
+        "  @extend %l-cleared-container;",
+        "  width: 100%;",
+        "  h3 {",
+        "    margin: 12px 0px 10px 0px;",
+        "    text-transform: uppercase;",
+        "    font: fontconfig(22px, 400);",
+        "  }",
+        "}",
+        "",
+        "/**",
+        "* description poop stuff it does",
+        "*/",
+        ".m-listitem-location {",
+        "  font: swt-fontconfig(72%, 600);",
+        "  margin-top: 8px;",
+        "}",
+        "",
+        "/**",
+        "* description poop stuff it does",
+        "* @extends %swm-ul-navigation",
+        "*/",
+        "#menu-links {",
+        "  @extend %swm-ul-navigation;",
+        "  position: absolute;",
+        "  bottom:8px;",
+        "  left: 294px;",
+        "}"
+    ]
+}

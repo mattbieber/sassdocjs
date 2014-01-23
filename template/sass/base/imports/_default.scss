@@ -1,0 +1,25 @@
+
+a, li {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+i {
+    /* Make the font smoother for Chrome */
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+a, button {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.disabled {
+
+    background-color: $color-disabled-bg;
+   // background-image: linear-gradient(transparent 50%, $color-disabled 50%);
+   // background-size: 2px 2px;
+
+}

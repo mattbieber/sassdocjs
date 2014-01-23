@@ -1,0 +1,64 @@
+{
+    "buffer": [],
+    "items": [
+        {
+            "id": 3,
+            "kind": "param",
+            "type": "String",
+            "name": "$background-image",
+            "description": "a background image url",
+            "src": "@param      $background-image {String} a background image url",
+            "paraminfo": {}
+        },
+        {
+            "id": 2,
+            "kind": "param",
+            "type": "String|Color",
+            "name": "$color",
+            "description": "a string or hex/rgba color value to use for the border",
+            "src": "@param      $color {String|Color} a string or hex/rgba color value to use for the border",
+            "paraminfo": {}
+        },
+        {
+            "id": 4,
+            "kind": "returns",
+            "type": "Style",
+            "name": "",
+            "description": "bordered left content",
+            "src": "@returns {Style} bordered left content",
+            "paraminfo": {}
+        },
+        {
+            "id": 5,
+            "kind": "example",
+            "type": "",
+            "name": "",
+            "description": "makeborder($lastname: something);\n",
+            "src": "@example",
+            "paraminfo": {}
+        }
+    ],
+    "id": "test01.scss.8",
+    "typeName": "SassDoclet",
+    "name": "makeborder",
+    "kind": "mixin",
+    "filename": "test01.scss",
+    "lineno": 63,
+    "expectedItemCount": 5,
+    "description": "Creates a repeated border from an image\n",
+    "prefix": null,
+    "raw": [
+        "",
+        "Creates a repeated border from an image",
+        "",
+        "@param      $location {String} acceptable values are horizontal or vertical",
+        "@param      $color {String|Color} a string or hex/rgba color value to use for the border",
+        "@param      $background-image {String} a background image url",
+        "",
+        "@returns {Style} bordered left content",
+        "@example",
+        "  makeborder($lastname: something);"
+    ],
+    "sass": "@function makeborder($location,\n                     $color: transparent,\n                     $background-image: none)\n{\n  @return $color $background-image repeat-x $location;\n}",
+    "context": 0
+}

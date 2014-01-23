@@ -1,0 +1,25 @@
+{
+    "buffer": [],
+    "items": {
+        "Number": {
+            "id": 1,
+            "kind": "var",
+            "type": "Number",
+            "name": "",
+            "description": " height of sprited elements",
+            "src": "@var {Number} height of sprited elements",
+            "paraminfo": {},
+            "context": 1
+        }
+    },
+    "id": "",
+    "typeName": "SassDoclet",
+    "kind": "var",
+    "doclet_id": "test01.scss.6",
+    "filename": "test01.scss",
+    "lineno": 19,
+    "expectedItemCount": 1,
+    "raw": [
+        " @var {Number} height of sprited elements "
+    ]
+}

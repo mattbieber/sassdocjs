@@ -1,0 +1,25 @@
+{
+    "buffer": [],
+    "items": {
+        "String": {
+            "id": 1,
+            "kind": "var",
+            "type": "String",
+            "name": "",
+            "description": " backround image path to sprite file",
+            "src": "@var {String} backround image path to sprite file",
+            "paraminfo": {},
+            "context": 1
+        }
+    },
+    "id": "",
+    "typeName": "SassDoclet",
+    "kind": "var",
+    "doclet_id": "test01.scss.2",
+    "filename": "test01.scss",
+    "lineno": 7,
+    "expectedItemCount": 1,
+    "raw": [
+        " @var {String} backround image path to sprite file "
+    ]
+}

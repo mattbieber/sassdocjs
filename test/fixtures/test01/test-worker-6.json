@@ -1,0 +1,19 @@
+{
+    "buffer": [],
+    "items": [],
+    "id": "test01.scss.6",
+    "typeName": "SassDoclet",
+    "name": "default-sprite-element-height",
+    "kind": "var",
+    "filename": "test01.scss",
+    "lineno": 19,
+    "expectedItemCount": 1,
+    "description": "height of sprited elements",
+    "prefix": null,
+    "raw": [
+        " @var {Number} height of sprited elements "
+    ],
+    "sass": "$default-sprite-element-height:         $icon-sprite-element-height;",
+    "type": "Number",
+    "context": 1
+}

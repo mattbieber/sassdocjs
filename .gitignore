@@ -7,11 +7,12 @@ lib-cov
 *.out
 *.pid
 *.gz
-
+doc/
 pids
 logs
 results
 
+.sass-cache
 *.DS_Store
 .idea/
 

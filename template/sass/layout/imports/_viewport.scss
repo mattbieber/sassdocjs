@@ -1,0 +1,88 @@
+/* ==|=======================================================================
+   Layout/Page
+   ========================================================================== */
+
+/*
+   properties necessary for responsive images
+   @usage:
+   @extend %m-image-responsive;
+   ---------------------------------------------------------- */
+html {
+    -webkit-font-smoothing: antialiased;
+    background: transparent;
+}
+
+/*
+   properties necessary for responsive images
+   @usage:
+   @extend %m-image-responsive;
+   ---------------------------------------------------------- */
+body {
+    overflow-x: hidden;
+    position: relative;
+    left: 0;
+    font: font-config($font-copy-size, $font-copy-weight, normal, $font-copy-family);
+    @include at-size($s) {
+        @include pushable;
+    }
+}
+
+.l-content {
+    padding-top: 16px;
+     margin-left: 460px;
+    z-Index: -1;
+
+    height: 100%;
+    .contained-content {
+        max-width: $size-content;
+
+    }
+}
+
+.l-contain {
+    @extend %l-cleared-container-overflow-visible;
+    @extend %l-containment;
+
+
+    @include at-size($l) {
+        max-width: 90%;
+    }
+
+    @include at-size($s) {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+.l-page {
+
+    height: 100%;
+    margin: 0 auto;
+    .l-page-content {
+        width: 69%;
+        float: left;
+        margin-right: 1%;
+
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.l-floatcontainer {
+    @extend %l-cleared-container;
+    width: 100%;
+}
+
+.l-centeredcontainer {
+    text-align: center;
+    width: 100%;
+    > * {
+        margin: 0 auto;
+    }
+}
+
+.l-cleared-container {
+  @extend %l-cleared-container;
+}

@@ -1,0 +1,19 @@
+{
+    "buffer": [],
+    "items": [],
+    "id": "test01.scss.3",
+    "typeName": "SassDoclet",
+    "name": "sprite-count",
+    "kind": "var",
+    "filename": "test01.scss",
+    "lineno": 10,
+    "expectedItemCount": 1,
+    "description": "number of sprites to expect in file",
+    "prefix": null,
+    "raw": [
+        " @var {Number} number of sprites to expect in file "
+    ],
+    "sass": "$sprite-count:                          23;",
+    "type": "Number",
+    "context": 1
+}

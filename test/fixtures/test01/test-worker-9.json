@@ -1,0 +1,30 @@
+{
+    "buffer": [],
+    "items": [
+        {
+            "id": 1,
+            "kind": "extends",
+            "type": "",
+            "name": "",
+            "description": "%l-cleared-container",
+            "src": "@extends %l-cleared-container",
+            "paraminfo": {}
+        }
+    ],
+    "id": "test01.scss.9",
+    "typeName": "SassDoclet",
+    "name": "m-listitem-base",
+    "kind": "placeholder",
+    "filename": "test01.scss",
+    "lineno": 74,
+    "expectedItemCount": 1,
+    "description": "description for m-listitem-base.\n",
+    "prefix": null,
+    "raw": [
+        "",
+        "description for m-listitem-base.",
+        "@extends %l-cleared-container"
+    ],
+    "sass": "%m-listitem-base {\n  @extend %l-cleared-container;\n  width: 100%;\n  h3 {\n    margin: 12px 0px 10px 0px;\n    text-transform: uppercase;\n    font: fontconfig(22px, 400);\n  }\n}",
+    "context": 0
+}

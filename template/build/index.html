@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+
+    
+    <link id="themecss" href="css/theme-default.css" rel="stylesheet" media="screen">
+    <link href="css/style.css" rel="stylesheet" media="screen">
+    <link href="js/highlight/styles/ir_black.css" rel="stylesheet" type="text/css" />
+    <script src="js/modernizr.js"></script>
+    <link href="img/favicon.ico" rel="icon" type="image/x-icon">
+
+</head>
+<body>
+
+<!-- project template -->
+<script id="tmpl-project" type="text/x-handlebars-template">
+    <section class="l-section-project m-section-project">
+        <div class="m-project-header">
+            {{#if logo}}<img src="{{logo}}" alt="{{name}}" />{{/if}}
+            <div class="m-project-name">{{name}}</div>
+        </div>
+
+        <div class="m-project-description">
+            {{#if description}}{{{nl2br description}}}{{/if}}
+        </div>
+        <div class="clearfix"></div>
+    </section>
+   
+</script>
+
+<!-- side nav template -->
+<script id="tmpl-sidebar" type="text/x-handlebars-template">
+    <div class="l-nav-sidebar">
+        <div class="l-nav-toc m-tocbar">
+            <div id="navtab-settings" class="m-nav-toc-pane">
+                <div class="options-close"><a class="options-closeclick" href="javascript:void(0);"><img src="images/delete.png" alt="close"/></a></div>
+                <h3>Settings</h3>
+                <div class="m-nav-toc">
+                    <h4>Options</h4>
+                    <div class="options-codetoggle">
+                        <div class="label-codetoggle">auto expand sass code blocks</div>
+
+                        <div class="switch">
+                            <a class="switch-link" data-val="no" href="javascript:void(0);">No</a>
+                            <a class="switch-link" data-val="yes" href="javascript:void(0);">Yes</a>
+                            <span class="switch-selection"></span>
+                        </div>
+
+                        <div class="clearfix"></div>
+
+                    </div>
+                    <h4>Theme</h4>
+                    {{#each themes}}
+                    <a class="settings-themelink" href="javascript:void(0);" data-theme="{{this}}">{{@key}}</a>
+
+                    {{/each}}
+                </div>
+            </div>
+            <div id="navtab-overview" class="m-nav-toc-pane">
+                <h3>Overview</h3>
+                <div class="m-nav-toc">
+                    <ul class="overview-list">
+                        <li><div class="overview-block">{{project.name}}</div></li>
+                        <li class="contentitem"><div class="overview-block">{{project.description}}</div></li>
+                        <li><span>version</span><span class="rightside">{{project.version}}</span></li>
+                        <li><span>sassdocjs version</span><span class="rightside">{{project.sassdocjs_version}}</span></li>
+                        <li><span>status</span><span class="rightside">{{project.status}}</span></li>
+
+                        <li><div class="overview-blockhead">authors</div></li>
+                        <li>
+                            <div class="overview-block"></div>
+                            {{#each project.authors}}
+                            <div>{{this}}</div>
+                            {{/each}}
+                        </li>
+                        <li><div class="overview-blockhead">contributors</div></li>
+                        <li>
+                            <div class="overview-block"></div>
+                            {{#each project.contributors}}
+                            <div>{{this}}</div>
+                            {{/each}}
+                        </li>
+                       
+                    </ul>
+                </div>
+            </div>
+            {{#each data}}
+            <div id="navtab-{{@key}}" class="m-nav-toc-pane">
+                <h3></h3>
+                <ul class="m-nav-toc">
+                    {{#each .}}
+                    {{#if file}}
+                    <li data-group="{{property}}" data-name="{{name}}"><a class="nav-href" href="#{{nodot id}}">{{name}}</a></li>
+                    {{else}}
+                    <li class="toc-header nav-href" data-group="{{kind}}"><a href="#{{nodot id}}">{{name}}</a></li>
+                    {{/if}}
+                    {{/each}}
+                </ul>
+            </div>
+            {{/each}}
+        </div>
+        <div id="menu" class="l-nav-menu m-nav-menu">
+            <ul>
+                {{#each filter}}
+                <li>
+                    <a id="nav-{{ property }}"
+                    data-group="{{property}}"
+                    href="javascript:void(0);"
+                    class="clicknav">
+                    <span class="icon"><i aria-hidden="true" class="{{icon}}"></i></span>
+                    <span class="label">{{label}}</span>
+                    <div class="border"></div>
+                    </a>
+               </li>
+                {{/each}}
+            </ul>
+        </div>  
+    </div>
+</script>
+
+<!-- groups template -->
+<script id="tmpl-groups" type="text/x-handlebars-template">
+    <section class="m-entry" id="section-{{grouping this}}">
+        {{#each .}}
+            <h2>{{grouplabel this}}</h2>
+            {{#each data}}
+                <article class="m-entry-article" id="{{nodot id}}" data-name="{{name}}" data-version="">
+                    <div class="entry-article-name"><h3>{{name}}</div>
+                    
+                    <div class="clearfix"></div>
+
+                    <p class="typedesc">
+                        {{#if type}}<span class="typeclass {{{type}}}"><span class="typechar">{{{sprite type}}}</span></span>{{/if}}
+                        {{#if description}}<span class="descclass">{{{nl2br description}}}</span>{{/if}}
+                    </p>
+                    {{#kindContext name='param'}}{{> params }}{{/kindContext}}
+                    {{#kindContext name='returns'}}{{> returns }}{{/kindContext}}
+                    {{#kindContext name='example'}}{{> example }}{{/kindContext}}
+
+                    {{#if sass.length}}
+                    <a class="entry-code-link" href="javascript:void(0);"><i aria-hidden="true" class="icon-braces"></i><span class="code-linktext"></span></a>
+                    <div class="entry-article-code">
+                        <pre><code class="scss">{{syntax sass}}</code></pre>
+                    </div>
+                    {{/if}}
+
+                    <div class="entry-article-line">
+                        {{filename}}, line {{lineno}}
+                    </div>
+
+                </article>
+    {{/each}}
+        {{/each}}
+    </section>
+</script>
+
+<!-- KINDS PARTIALS - put any custom templates here -->
+<!--params partial -->
+<script id="part-params" type="text/x-handlebars-template">
+    <div class="m-entry-part">
+        <h3>params</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="line-name">name</th>
+                    <th class="line-type">type</th>
+                    <th class="line-desc">description</th>
+                </tr>
+            </thead>
+            <tbody>
+            {{#each .}}
+            <tr>
+                <td class="line-name">{{name}}</td>
+                <td class="line-type typekind"><span class="{{type}}">{{type}}</type></td>
+                <td class="line-desc">{{description}}</td>
+            </tr>
+            {{/each}}
+            </tbody>
+        </table>
+    </div>
+</script>
+
+<!--returns partial -->
+<script id="part-returns" type="text/x-handlebars-template">
+    <div class="m-entry-part">
+        <h3>returns</h3>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>type</th>
+                <th>description</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#each .}}
+            <tr>                
+                <td class="typekind"><span class="{{type}}">{{type}}</span></td>
+                <td>{{description}}</td>
+            </tr>
+            {{/each}}
+            </tbody>
+        </table>
+    </div>
+</script>
+
+<!--example partial -->
+<script id="part-example" type="text/x-handlebars-template">
+    <div class="m-entry-part">
+        <h3>example</h3>
+        {{#each .}}
+         <pre><code class="scss">{{description}}</code></pre>
+        {{/each}}
+    </div>
+</script>
+
+<!-- --- PAGE --- -->
+<div class="l-page">
+    <div id="sidebar" class="l-sidebar"></div>
+    <div id="content" class="l-content">
+        <div class="contained-content">
+            <div id="project"></div>
+            <div id="overview" class="m-content-overview"></div>
+            <div id="groups"></div>
+        </div>
+    </div>
+</div>
+
+<script data-main="js/main.js" src="js/requirejs.js"></script>
+</body>
+</html>

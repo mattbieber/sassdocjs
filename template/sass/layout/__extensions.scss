@@ -1,0 +1,106 @@
+/* ==go |=======================================================================
+   layout.extensions
+   ========================================================================== */
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+/* 
+   properties necessary for responsive images
+   @usage:
+   @extend %m-image-responsive;
+   ---------------------------------------------------------- */
+@mixin pushable {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* 
+   properties necessary for responsive images
+   @usage:
+   @extend %m-image-responsive;
+   ---------------------------------------------------------- */
+%l-cleared-container {
+  position: relative;
+  @extend %clearfix;
+}
+
+/* 
+   properties necessary for responsive images
+   @usage:
+   @extend %m-image-responsive;
+   ---------------------------------------------------------- */
+%l-cleared-container-overflow-visible {
+  @extend %clearfix;
+  position: relative;
+  overflow:visible;
+  *zoom: 1;
+}
+
+
+/* 
+   properties necessary for responsive images
+   @usage:
+   @extend %m-image-responsive;
+   ---------------------------------------------------------- */
+%l-abszero-left {
+  position: absolute;
+  left:0; 
+}
+
+/* 
+   properties necessary for responsive images
+   @usage:
+   @extend %m-image-responsive;
+   ---------------------------------------------------------- */
+%l-abszero-right {
+  position: absolute;
+  right:0; 
+}
+
+/* 
+   properties necessary for responsive images
+   @usage:
+   @extend %m-image-responsive;
+   ---------------------------------------------------------- */
+%l-abszero-bottom {
+  position: absolute;
+  bottom:0; 
+}
+
+/* 
+   properties necessary for responsive images
+   @usage:
+   @extend %m-image-responsive;
+   ---------------------------------------------------------- */
+%l-position-relative {
+  position: relative;
+}
+
+/* 
+   properties necessary for responsive images
+   @usage:
+   @extend %m-image-responsive;
+   ---------------------------------------------------------- */
+%l-containment {
+    width: 100%;
+    max-width: $size-content;
+    display: block;
+    clear: both;
+    margin: 0 auto;
+}
+
+/* 
+   properties necessary for responsive images
+   @usage:
+   @extend %m-image-responsive;
+   ---------------------------------------------------------- */
+@mixin full-width-height {
+  height: 100%;
+  width: 100%;
+}

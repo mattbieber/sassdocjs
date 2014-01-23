@@ -1,0 +1,27 @@
+{
+    "buffer": [],
+    "items": {
+        "": {
+            "id": 1,
+            "kind": "extends",
+            "type": "",
+            "name": "",
+            "description": "%swm-ul-navigation",
+            "src": "@extends %swm-ul-navigation",
+            "paraminfo": {},
+            "context": 0
+        }
+    },
+    "id": "",
+    "typeName": "SassDoclet",
+    "kind": "id",
+    "doclet_id": "test01.scss.11",
+    "filename": "test01.scss",
+    "lineno": 96,
+    "expectedItemCount": 1,
+    "raw": [
+        "",
+        "description poop stuff it does",
+        "@extends %swm-ul-navigation"
+    ]
+}

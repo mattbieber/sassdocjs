@@ -1,0 +1,48 @@
+/* --|-----------------------------------------------------------------------
+   typography.extensions
+   -------------------------------------------------------------------------- */
+
+/* 
+  properties necessary for responsive images
+  @usage:
+  @extend %m-image-responsive;
+  ---------------------------------------------------------- */
+@mixin swt-fontface($name) {
+    font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 
+  properties necessary for responsive images
+  @usage:
+  @extend %m-image-responsive;
+  ---------------------------------------------------------- */
+%font-smoothing {
+    font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 
+  properties necessary for responsive images
+  @usage:
+  @extend %m-image-responsive;
+  ---------------------------------------------------------- */
+@mixin swt-text-shadow {
+    filter: DropShadow(Color = black, OffX = 2, OffY = 1);
+    text-shadow: 2px 1px 0 #000;
+}
+
+/* 
+  properties necessary for responsive images
+  @usage:
+  @extend %m-image-responsive;
+  ---------------------------------------------------------- */
+@function font-config(
+    $size: 1em, 
+    $weight: 400, 
+    $style: normal, 
+    $family: $font-copy-family) {
+    @return $style $weight $size $family;
+}

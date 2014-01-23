@@ -1,0 +1,95 @@
+/* ==|=======================================================================
+   layout.header
+   ========================================================================== */
+$header-banner-height:                    101px;
+$header-banner-height-m:                  76px;
+$header-navmobile-width:                  206px;
+$header-navmobile-offset:                 300px;
+$header-nav-height:                       24px;
+
+// --------------------------------------
+
+
+.l-header {
+  @extend %l-cleared-container-overflow-visible;
+  @extend %l-cleared-container;
+  @extend %l-containment;
+    
+  @include at-size($xl) {
+      //max-width: 85%;
+  }
+
+  @include at-size($l) {
+      //max-width: 90%;
+  }
+
+  @include at-size($s) {
+      max-width: 100%;
+  }
+  
+  .l-header-banner {
+    @extend %l-cleared-container;
+    height: $header-banner-height;
+
+    @include at-size($s) {
+      height: $header-banner-height-m;
+    }
+  }
+
+  .l-header-nav {
+
+	@extend %l-cleared-container-overflow-visible;
+
+	height: $header-nav-height * 2;
+
+	@include at-size($s) {
+      position: absolute;
+      overflow: visible;
+      
+      border-right: 3px inset #333;
+      left: $header-navmobile-width * (-1);
+      width: $header-navmobile-width;
+      max-width: $header-navmobile-width;
+      @include pushable;
+    }
+
+  }
+
+  .l-header-nav-open {
+
+  }
+}
+
+.l-header-search {
+  @extend %l-cleared-container;
+  float: right;
+  width: 30%;
+  height: $header-nav-height;
+  @include at-size($xl) {
+    //width: 25%;
+  }
+  @include at-size($s) {
+    width: 100%;
+    float: none;
+  }
+}
+
+.l-header-menu {
+  //clear:both;
+  float:left;
+  margin:0;
+  padding:0;
+  z-index:1000; /* This makes the dropdown menus appear above the page content below */
+  position:relative;
+  width: 70%;
+
+
+  @include at-size($s) {
+
+    width: 100%;
+    float: none;
+    height: 600px;
+  }
+
+
+}
