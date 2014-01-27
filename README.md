@@ -12,7 +12,7 @@ I've tried to keep things extensible: there's a default set of 'language definit
  
    [1]: http://nodejs.org
    [2]: http://usejsdoc.org
-   [3]: http://http://smacss.com
+   [3]: http://smacss.com
 
 Website/Demo: [sassdocjs.com][sd2]
 
