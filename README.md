@@ -215,3 +215,5 @@ Licensed under the [MIT License (MIT)][lic]
 Website: [sassdocjs.com][sd]
   
   [sd]: http://sassdocjs.com
+  
+[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/11aee70d21b23155f0395f7e47258f82 "githalytics.com")](http://githalytics.com/mattbieber/sassdocjs)  
