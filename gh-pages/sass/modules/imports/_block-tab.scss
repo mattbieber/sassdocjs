@@ -1,0 +1,123 @@
+
+.bs-docs-section {
+    //margin: 30px;
+}
+.bs-docs-section ul {
+    margin: 8px 0 42px 20px;
+
+
+}
+
+.bs-docs-section .content {
+    margin-bottom: 20px;
+}
+
+.bs-docs-section h2 {
+    font: font-config(2.6em, 700, $family: $font-copy);
+    margin: 20px 0px;
+
+}
+
+.page-header h1 {
+    font: font-config(2.6em, 700, $family: $font-copy);
+}
+.bs-docs-section h3 {
+    font: font-config(2em, 700, $family: $font-copy);
+	margin: 0px 0px 20px;
+    padding-bottom:8px;
+    border-bottom: 1px solid #eee;
+
+}
+
+.bs-docs-section h4 {
+    font: font-config(1.2em, 400, $family: $font-copy);
+    margin-bottom: 10px;
+}
+.bs-docs-section .doclist {
+    li {
+        @extend %l-cleared-container;
+        border-bottom: 1px solid #eee;
+        width: 80%;
+
+        div { float: left; }
+
+        div.a { width: 20%; }
+        div.b { width: 80%; }
+
+        div.cc {
+            float: none;
+            width: 100%;
+        }
+
+        @include at-size($s) {
+            width: 100%;
+            div { float: none; }
+
+            div.a, div.b { width: 100%; }
+        }
+
+    }
+}
+
+sup {
+    font-size: 125%;
+    top: -0.2em;
+}
+
+.bs-docs-section p {
+	margin-bottom:30px;
+}
+
+.bs-docs-section ul {
+	list-style: none;
+}
+
+
+
+.container-area>li {
+
+}
+.ocssq {
+    font: font-config(1em, $style: italic, $family: $font-copy);
+    .qquote {
+        //font-size:200%;
+    }
+    //background: #eee;
+    //width: 8%;
+    margin-bottom: 20px;
+}
+
+.oocss-callout {
+    a {
+        display: block;
+
+    }
+}
+.nav { display: block; }
+
+.page-header {
+    padding-bottom: 9px;
+    margin: 40px 0 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.code-direction {
+    margin: 36px 0px;
+}
+
+.gicon {
+    @extend %l-cleared-container;
+    height: 2.2em;
+    
+    i {
+        display: block;
+        float: left;display: block;
+        float: left;
+        font-size: 2.2em;
+        color: #333;
+    }
+    span {
+        line-height: 2.2em;
+    }
+}
+

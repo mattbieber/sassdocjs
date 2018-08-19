@@ -1,0 +1,342 @@
+/* ==|=======================================================================
+   modules.header-callout.header
+   ========================================================================== */
+
+$header-h1-size: 800%;
+$header-banner-size: 140%;
+
+
+a, li {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+/* Global CSS that are applied for all screen sizes */
+
+.header-callout ul {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    font-size: 1.5em;
+    font-weight: 300;
+
+    @include portrait() {
+        margin-top: -10px;
+    }
+}
+
+.header-callout li span {
+    display: block;
+    @include portrait(){
+        display: inline;
+    }
+
+}
+
+.header-callout a {
+
+    display: block;
+    color: $color-default;
+    text-decoration: none;
+    -webkit-transition: color .5s, background .5s, height .5s;
+    -moz-transition: color .5s, background .5s, height .5s;
+    -o-transition: color .5s, background .5s, height .5s;
+    -ms-transition: color .5s, background .5s, height .5s;
+    transition: color .5s, background .5s, height .5s;
+}
+
+// .header-callout i{
+//     font-size: 48px;
+//     /* Make the font smoother for Chrome */
+//     -webkit-transform: translate3d(0, 0, 0);
+//     -moz-transform: translate3d(0, 0, 0);
+
+//     -o-transform: translate3d(0, 0, 0);
+//     -ms-transform: translate3d(0, 0, 0);
+//     transform: translate3d(0, 0, 0);
+// }
+
+/* Remove the blue Webkit background when element is tapped */
+
+a, button {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+
+/* Hover effect for the whole navigation to make the hovered item stand out */
+
+
+.no-touch .header-callout ul:hover a:hover {
+    color: rgba(249, 249, 249, 0.99);
+}
+
+    /* Transforms the list into a horizontal navigation */
+    .header-callout li {
+        margin: 0 auto;
+        width: 80%;
+        text-align: center;
+        -webkit-transition: border .5s;
+        -moz-transition: border .5s;
+        -o-transition: border .5s;
+        -ms-transition: border .5s;
+        transition: border .5s;
+    }
+
+    .icon {
+        opacity:1;
+        font-size: 1.8em;
+        padding: 1.4em 0;
+        -webkit-transition: all .9s;
+        -moz-transition: all .9s;
+        -o-transition: all .9s;
+        -ms-transition: all .9s;
+        transition: all .9s;
+        
+        @media screen and (max-height:800px){
+            padding: .4em 0;
+
+        }
+
+          @include portrait(){
+            font-size: 1.4em;
+            padding: 0;
+        }
+
+    }
+
+    .icon + span {
+        margin-top: 2.1em;
+        opacity: 1;
+        -webkit-transition: all .5s;
+        -moz-transition: all .5s;
+        -o-transition: all .5s;
+        -ms-transition: all .5s;
+        transition: all .5s;
+
+        
+    }
+
+    /* Animating the height of the element*/
+    .header-callout a {
+        //height: 9em;
+    }
+
+    .no-touch .header-callout a:hover ,
+    .header-callout a:active ,
+    .header-callout a:focus {
+       // height: 10em;
+    }
+
+
+    /* Positioning the icons and preparing for the animation*/
+    .header-callout i {
+
+    }
+
+
+
+/* Page headers */
+.bs-header {
+    padding: 30px 15px 40px; /* side padding builds on .container 15px, so 30px */
+    font-size: 16px;
+    text-align: center;
+
+    @include at-size($ms) {
+        padding-top: 10px;
+    }
+
+    .getbutton {
+        font: font-config(1em, 700, $family: $font-copy);
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        padding-bottom: 1em;
+    }
+
+    .demolink {
+        margin-top:3.6em;
+
+        a{
+        color: rgb(51,51,51);
+            border-bottom: 1px dashed #ddd;
+        font: font-config(1.2em, 700, $family: $font-copy);
+        &:hover {
+            color: #ddd;
+        }
+        }
+    }
+}
+
+.bs-header h1 {
+
+    font: font-config($header-h1-size, $family: $font-head);
+    margin: 0 auto;
+    text-align: center;
+
+    @include at-size($l) {
+        font-size: $header-h1-size * 0.75;
+    }
+
+    @include at-size($m) {
+        font-size: $header-h1-size * 0.5;
+    }
+
+    @include at-size($s) {
+        font-size: $header-h1-size * 0.4;
+    }
+    @include portrait() {
+        font-size: 300%;
+    }
+}
+.bs-header p {
+    font-weight: 300;
+    line-height: 1.5;
+
+}
+
+.bs-header .banner {
+    font: font-config($header-banner-size, $family: $font-code-alt);
+    margin: 0 auto;
+    text-align: center;
+    letter-spacing: 0.02em;
+    width: 75%;
+
+    @include at-size(1200px) {
+        width: 100%;
+    }
+    @include at-size($l) {
+        // font-size: $header-banner-size * 0.75;
+    }
+
+    @include at-size($m) {
+        //font-size: $header-banner-size * 0.5;
+    }
+
+     @media screen and (max-width:600px) and (orientation: landscape) {
+        font-size: 100%;
+    }
+
+    @include at-size($s) {
+        font-size: 100%;
+    }
+
+
+}
+
+.bs-header .container {
+    position: relative;
+}
+
+#docstop.affix {
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+
+#docstop > .inner {
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -o-border-radius: 0;
+}
+
+
+.hero-on {
+
+    .icon {
+        font-size: 2em;
+        opacity:0.1;
+        padding-top: .08em;
+        -webkit-transition: all .9s;
+        -moz-transition: all .9s;
+        -o-transition: all .9s;
+        -ms-transition: all .9s;
+        transition: all .9s;
+
+      
+    }
+    .icon + span {
+        margin-top: 3.2em;
+        opacity: 0;
+
+        -webkit-transition: all .5s;
+        -moz-transition: all .5s;
+        -o-transition: all .5s;
+        -ms-transition: all .5s;
+        transition: all .5s;
+    }
+
+}
+
+#totop {
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    text-decoration: none;
+    height: 60px;
+    width: 60px;
+    background-color: rgba(0, 0, 0, 1.0);
+    background: transparent url('/images/home.png') no-repeat center;
+    display: none;
+    z-index: 9999;
+}
+.navfix {
+    position: fixed;
+    top: 4%;
+    bottom: auto;
+}
+
+.navabs {
+    position: absolute;
+    top:auto;
+}
+#getstarted {
+    opacity: 0;
+    width: 100%;
+    margin-top: 30%;
+    z-index: 5;
+
+    @media screen and (max-height:800px){
+            margin-top: 10%;
+    }
+
+    @include portrait {
+        //display:none;
+    }
+}
+.started-fix {
+    position: fixed;
+    bottom: 18%;
+    left: 0;
+
+    @media screen and (max-height:800px){
+        bottom:5%; 
+    }
+
+}
+.started-rel {
+    position: relative;
+
+    @media screen and (max-height:800px){
+//        bottom:5%; 
+    }
+}
+
+
+$anitime: all .3s ease;
+.startoff {
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: $anitime;
+  -moz-transition: $anitime;
+  -ms-transition: $anitime;
+  -o-transition: $anitime;
+  transition: $anitime;
+}
+
+.affix {
+    position: relative;
+}

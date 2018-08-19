@@ -1,0 +1,249 @@
+
+.highlight td { padding: 8px 15px }
+
+
+
+.highlight, .highlight pre, .highlight code {
+    color: #333;
+}
+.highlight .n { /* name */
+    color: #1b9af7;
+}
+.highlight .k { /* keyword */
+    color: #EE920E;
+}
+.highlight .o { /* operator */
+}
+.highlight .p { /* punctuation */
+}
+.highlight .c { /* comment */
+    color: #888;
+}
+.highlight .err { /* error */
+    color: #ff4351;
+}
+.highlight .cm {
+    color: #afafaf; background: #f5f5f5; }
+
+.highlight .cp { /* comment.preproc */
+    color: #888;
+}
+.highlight .c1 { /* comment.single */
+    color: #888;
+}
+.highlight .cs { /* comment.special */
+    color: #888;
+}
+.highlight .gd { /* generic.deleted */
+}
+.highlight .gd .x { /* generic.deleted.specific */
+}
+.highlight .ge { /* generic.emph */
+}
+.highlight .gr { /* generic.error */
+    color: #ff4351;
+}
+.highlight .gh { /* generic.heading */
+    color: #888;
+}
+.highlight .gi { /* generic.inserted */
+}
+.highlight .gi .x { /* generic.inserted.specific */
+}
+.highlight .go { /* generic.output */
+    color: #888;
+}
+.highlight .gp { /* generic.prompt */
+    color: #888;
+}
+.highlight .gs { /* generic.strong */
+}
+.highlight .gu { /* generic.subheading */
+    color: #888;
+}
+.highlight .gt { /* generic.traceback */
+    color: #ff4351;
+}
+.highlight .kc { /* keyword.constant */
+    color: #1b9af7;
+}
+.highlight .kd { /* keyword.declaration */
+    color: #1E6AC6;
+}
+.highlight .kp { /* keyword.pseudo */
+    color: #1b9af7;
+}
+.highlight .kr { /* keyword.reserved */
+    color: #1b9af7;
+}
+.highlight .kt { /* keyword.type */
+    color: #1b9af7;
+}
+.highlight .m { /* literal.number */
+    color: #ed4694;
+}
+.highlight .s { /* literal.string */
+    color: #fc880f;
+}
+.highlight .na { /* name.attribute */
+    color: #a5de37;
+}
+.highlight .nb { /* name.builtin */
+    color: #1b9af7;
+}
+.highlight .nc { /* name.class */
+    background-color: rgba(123,114,233,.05);
+    border-radius: 1px;
+    color: #7b72e9;
+}
+.highlight .no { /* name.constant */
+    color: #a5de37;
+}
+.highlight .ni { /* name.entity */
+    color: #7b72e9;
+}
+.highlight .ne { /* name.exception */
+    color: #ed4694;
+}
+.highlight .nf { /* name.function */
+    background-color: rgba(123,114,233,.05);
+    border-radius: 1px;
+    color: #7b72e9;
+}
+.highlight .nd { /* name.decorator */
+    color: #ed4694;
+}
+.highlight .nn { /* name.namespace */
+    color: #ed4694;
+}
+.highlight .nt { /* name.tag */
+    background-color: rgba(27,154,247,.05);
+    border-radius: 1px;
+    color: #1b9af7;
+}
+.highlight .nv { /* name.variable */
+    color: #ed4694;
+}
+.highlight .nx { /* name.other */
+    color: #333;
+}
+.highlight .ow { /* operator.word */
+    color: #ed4694;
+}
+.highlight .w { /* text.whitespace */
+    color: #888;
+}
+.highlight .mf { /* literal.number.float */
+    color: #a5de37;
+}
+.highlight .mh { /* literal.number.hex */
+    color: #a5de37;
+}
+.highlight .mi { /* literal.number.integer */
+    color: #D32C2C;
+}
+.highlight .mo { /* literal.number.oct */
+    color: #a5de37;
+}
+.highlight .sb { /* literal.string.backtick */
+    color: #fc880f;
+}
+.highlight .sc { /* literal.string.char */
+    color: #fc880f;
+}
+.highlight .sd { /* literal.string.doc */
+    color: #fc880f;
+}
+.highlight .s2 { /* literal.string.double */
+    color: #fc880f;
+}
+.highlight .se { /* literal.string.escape */
+    color: #fc880f;
+}
+.highlight .sh { /* literal.string.heredoc */
+    color: #fc880f;
+}
+.highlight .si { /* literal.string.interpol */
+    color: #fc880f;
+}
+.highlight .sx { /* literal.string.other */
+    color: #fc880f;
+}
+.highlight .sr { /* literal.string.regex */
+    color: #fc880f;
+}
+.highlight .s1 { /* literal.string.single */
+    color: rgb(27,188,157);  background: rgb(231,248,244);
+}
+.highlight .ss { /* literal.string.symbol */
+    color: #db49d8;
+}
+.highlight .bp { /* name.builtin.pseudo */
+    color: #ed4694;
+}
+.highlight .vc { /* name.variable.class */
+    color: #a5de37;
+}
+.highlight .vg { /* name.variable.global */
+    color: #a5de37;
+}
+.highlight .vi { /* name.variable.instance */
+    color: #a5de37;
+}
+.highlight .il { /* literal.number.integer.long */
+    color: #a5de37;
+}
+.highlight {
+    border: solid 1px #ddd; background: #fff; padding: 0; line-height: 28px; margin-bottom: 40px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+
+}
+pre { white-space: pre; overflow-x: auto; word-break: inherit; word-wrap: inherit }
+
+pre .code { display: block }
+
+pre a::before { content: counter(line-numbering); counter-increment: line-numbering; padding-right: 1em; width: 25px; text-align: right; opacity: 0.7; display: inline-block; color: #aaa; background: #eee; margin-right: 16px; padding: 2px 10px; font-size: 13px; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none }
+
+pre a:first-of-type::before { padding-top: 10px }
+
+pre a:last-of-type::before { padding-bottom: 10px }
+
+pre a:only-of-type::before { padding: 10px }
+
+pre * { font-weight: normal !important }
+
+pre {
+    background-color: transparent;
+    border:none;
+}
+
+pre code, code {
+    font: font-config(0.85em, $family: $font-code);
+}
+
+.highlight {
+    overflow-x: hidden;
+    @include at-size($s) {
+        display: none;
+    }
+}
+
+.highlight, .highlight pre, .highlight code {
+    color: #333;
+    font: font-config(0.9em, $family: $font-code);
+}
+
+.linenodiv {
+    width:40px;
+    overflow: hidden;
+
+
+}
+td.linenos {
+    background: #434343;
+    pre {
+        color: #eeeeee;
+    }
+}

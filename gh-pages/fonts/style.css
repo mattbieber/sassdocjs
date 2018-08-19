@@ -1,0 +1,52 @@
+@font-face {
+	font-family: 'glyphs';
+	src:url('fonts/glyphs.eot');
+	src:url('fonts/glyphs.eot?#iefix') format('embedded-opentype'),
+		url('fonts/glyphs.woff') format('woff'),
+		url('fonts/glyphs.ttf') format('truetype'),
+		url('fonts/glyphs.svg#glyphs') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'glyphs';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-location-arrow:before {
+	content: "\e600";
+}
+.icon-point-of-interest:before {
+	content: "\e601";
+}
+.icon-sassdoc:before {
+	content: "\e602";
+}
+.icon-googleplus:before {
+	content: "\e603";
+}
+.icon-twitter:before {
+	content: "\e604";
+}
+.icon-mail:before {
+	content: "\e605";
+}
+.icon-facebook:before {
+	content: "\e606";
+}
+.icon-github:before {
+	content: "\e607";
+}
+.icon-earth:before {
+	content: "\e608";
+}

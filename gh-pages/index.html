@@ -1,0 +1,574 @@
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0" />
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>sassdocJs - Handsome documentation for your Sass source code.</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="/favicon.png">
+    <script src="js/libs/modernizr.js"></script>
+
+</head>
+<body>
+<!--<div style="position:fixed; top:10px;left:10px;height: 20px;width: 300px;" class="debug">-->
+<!--<span class="da"></span> / <span class="db"></span>-->
+<!--</div>-->
+<div class="fork"><a href="https://github.com/mattbieber/sassdocjs"><img src="/images/fork.png" alt="sassdocJs on GitHub" /></a></div>
+<div class="bs-header" id="content">
+
+    <div class="container-s" >
+        <h1>sassdocJs</h1>
+
+        <div class="clearfix">
+            <div id="menu" class="header-callout">
+                <ul>
+                    <li>
+                        <span class="icon">
+                            <i aria-hidden="true" class="icon-sassdoc"></i>
+                        </span>
+                        <span class="banner">Decidedly handsome documentation for your Sass source code.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="getstarted" class="started-fix">
+        <p><a class="getbutton btn btn-lg btn-primary"
+              href="#docstop"
+              role="button">Get started!</a>
+        </p> 
+        <p class="demolink"><a href="/doc">demo</a></p>
+    </div>
+</div>
+
+<div id="docstop" class=""></div>
+<a href="javascript:void(0);" id="totop"></a>
+<div class="container pgcontent">
+    <div class="lp">
+        <div class="bs-sidebar hidden-print" role="complementary">
+            <ul class="nav bs-sidenav">
+                <li>
+                    Getting Started
+                    <ul class="nav">
+                        <li><a href="#install">Installation</a></li>
+                        <li><a href="#usage">Usage</a></li>
+                        <li><a href="#options">Options</a></li>
+                    </ul>
+                </li>
+                <li>
+                    Documentation
+                    <ul class="nav">
+                        <li><a href="#defs">Definitions</a></li>
+                        <li><a href="#oocss">OOCSS Support</a></li>
+                        <li><a href="#usedin">Location Used</a></li>
+                        <li><a href="#template">Template</a></li>
+                        <li><a href="#examples">Examples</a></li>
+                    </ul>
+                </li>
+                <li>
+                    Information
+                    <ul class="nav">
+                        <li id="stopper"><a href="#test">Test</a></li>
+                        <li><a href="#issues">Known Issues</a></li>
+                        <li><a href="#roadmap">Roadmap</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="rp" role="main">
+        <div class="page-header"><h1 id="">Getting Started</h1></div>
+        <p class="lead">
+            <span class="emphasis">sassdocJs</span> is a <a href="http://nodejs.org" target="_blank">nodejs</a>
+            command-line (CLI) app that will parse <a href="http://usejsdoc.org" target="_blank">jsDoc</a> style comments<sup>*</sup>
+            found in your <code>.scss</code> source files, and use them to create a structured set of Html-based documentation.  It's
+            aim is to provide an easy way to catalog your growing library of sass mixins, functions, placeholders, etc,
+            while complimenting whatever workflow, or Sass/Css/OOCSS standardization you may have adopted.
+            <br /><br/>
+            By default, sassdocJs will group your documentation by kind (mixin, var, etc.), name, and file.  It's also possible to group by
+            useage location (header, navbar, etc.), and by OOCSS-style naming conventions (m-odule, l-ayout, etc.) as used in
+            <a href="http://bem.info" target="_blank">BEM</a>, <a href="http://http://smacss.com" target="_blank">SMACSS</a> and the like.
+            <br /><br />
+            I've tried to keep things extensible: there's a default set of 'language definitions', such as <code>@mixin</code>, <code>%placeholder</code>,
+            or <code>#id</code>, but it's simple to construct custom definitions. A theme-able Html/Handlebars.js template is included.
+            Finally, the parsed documentation result is saved as plain JSON, so you can easily work it into whatever front-end you fancy.
+            <p><sup>*</sup> currently not <code>//</code> comments - see <a id="seehere" href="#issues">here</a>
+        </p>
+
+
+        <!-- install-->
+        <div id="install" class="bs-docs-section">
+            <h3>Installation</h3>
+            <p>sassdocJs is built with nodeJs & can be installed via <a href="https://npmjs.org/" target="_blank">npm</a> or download the source.</p>
+
+            <h4 class="">with npm</h4>
+
+            <div class="well well-sm">
+                <pre><code class="bash">npm install -g sassdocjs</code></pre>
+            </div>
+
+            <h4 class="">Clone or fork on <a href="http://github.com/mattbieber/sassdocjs">GitHub</a></h4>
+
+            <div class="well well-sm">
+                <pre><code>git clone git://github.com/mattbieber/sassdocjs.git</code></pre>
+            </div>
+        </div>
+
+        <!-- usage -->
+        <div class="bs-docs-section">
+            <h3 id="usage">Usage</h3>
+            <p>To use sassdocJs, open up a shell and run the following command.  There's a number of command line options available, see below.</p>
+            <div class="well well-sm">
+                <pre><code>sassdocjs [path] [options]</code></pre>
+            </div>
+            <p>
+                With no arguments , sassdocJs will recursively search the current directory for Sass source files,
+                and output generated documentation to <code>./doc</code>
+            </p>
+        </div>
+
+        <!-- options -->
+        <div class="bs-docs-section">
+            <h3 id="options">Options</h3>
+
+            <p>There's a fair amount of configuration switches, see below on how to supply them via a config file.</p>
+
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                    <tr>
+                        <th>Option</th>
+                        <th>Description</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    <tr>
+                        <td>-n, –name</td>
+                        <td>name of the project</td>
+                    </tr>
+                    <tr>
+                        <td>-u, –logo</td>
+                        <td>logo file url to appear in documentation header</td>
+                    </tr>
+                    <tr>
+                        <td>-d, –description</td>
+                        <td>project description</td>
+                    </tr>
+                    <tr>
+                        <td>-v, –version</td>
+                        <td>version of the documentation</td>
+                    </tr>
+                    <tr>
+                        <td>-a, –auth</td>
+                        <td>project author(s)</td>
+                    </tr>
+                    <tr>
+                        <td>-b, –contrib</td>
+                        <td>project contributors</td>
+                    </tr>
+                    <tr>
+                        <td>-s, –status</td>
+                        <td>project status</td>
+                    </tr>
+                    <tr>
+                        <td>-x, –exclude</td>
+                        <td>file pattern for exclusion</td>
+                    </tr>
+                    <tr>
+                        <td>-i, –include</td>
+                        <td>file pattern for inclusion</td>
+                    </tr>
+                    <tr>
+                        <td>-o, –out</td>
+                        <td>path to write generated docs to</td>
+                    </tr>
+                    <tr>
+                        <td>-t, –template</td>
+                        <td>path to output template directory</td>
+                    </tr>
+                    <tr>
+                        <td>-r, –recurse</td>
+                        <td>recurse working directory for sass sources</td>
+                    </tr>
+                    <tr>
+                        <td>-p, –prefix</td>
+                        <td>categorize by prefix (e.g. <code>m-</code> = module)</td>
+                    </tr>
+                    <tr>
+                        <td>-c, –config</td>
+                        <td>save .yml config file in working directory<code>true</code></td>
+                    </tr>
+                    <tr>
+                        <td>-l, –log</td>
+                        <td>toggle logging</td>
+                    </tr>
+                    <tr>
+                        <td>-y, –verbose</td>
+                        <td>logging verbosity</td>
+                    </tr>
+                    <tr>
+                        <td>-m, –limit</td>
+                        <td>set the allowed file parsing concurrencey</td>
+                    </tr>
+                    <tr>
+                        <td>-h, –help</td>
+                        <td>show sassdocjs usage options</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="bs-callout bs-callout-info">
+                <h4>Options config file</h4>
+
+                <p>You can simplify configuration by putting a <a href="http://www.yaml.org/">YAML</a> config file -
+                    <code>config.yml</code>
+                    - at the root of your projects’ source folder.  See the one included in the example for file’s
+                    layout, or run <code>sassdocjs --config</code> and fill out the created file.
+                </p>
+            </div>
+        </div>
+
+        <!-- defs -->
+        <div class="bs-docs-section">
+            <h3 id="defs">Language Definitions</h3>
+
+            <p>
+                When parsing comments, sassdocJs pulls out comments using 'definitions' found in <code>lib/lang/defs</code>.
+                Definitions can be supplied for both in-comment tags, or for a keyword prefix character,
+                as in <code>#</code> and <code>%</code>, for Css Ids and Sass placeholders. The following are provided:
+            </p>
+
+            <ul class="doclist">
+                <li>
+                    <div class="a"><code>$</code></div>
+                    <div class="b">Sass variable</div>
+                </li>
+                <li>
+                    <div class="a"><code>%</code></div>
+                    <div class="b">Sass placeholder</div>
+                </li>
+                <li>
+                    <div class="a"><code>.</code></div>
+                    <div class="b">Css class</div>
+                </li>
+                <li>
+                    <div class="a"><code>#</code></div>
+                    <div class="b">Css Id</div>
+                </li>
+                <li>
+                    <div class="a"><code>@</code></div>
+                    <div class="b">Sass mixin/function</div>
+                </li>
+                <li>
+                    <div class="a"><code>@module</code></div>
+                    <div class="b">Define a file as a module</div>
+                </li>
+                <li>
+                    <div class="a"><code>@param</code></div>
+                    <div class="b">Sass mixin/function argument</div>
+                </li>
+                <li>
+                    <div class="a"><code>@returns</code></div>
+                    <div class="b">Sass mixin/function return value</div>
+                </li>
+                <li>
+                    <div class="a"><code>@example</code></div>
+                    <div class="b">Code example</div>
+                </li>
+                <li>
+                    <div class="a"><code>@usedin</code></div>
+                    <div class="b">Location(s) the documented item can be found</div>
+                </li>
+            </ul>
+
+            <p>It’s fairly trivial to supply your own documentation tag definitions should you wish.  Any
+                <code>def_*.js</code> file found by the parser will be included as a definition and have it's rules applied during validation.  Definition
+                files should implement <code>lib/lang/defs/_def.js</code>. </p>
+
+
+            <div class="highlight">
+                <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35</pre>
+                </div>
+                </td>
+                    <td class="code"><pre>
+<span class="cm">/**</span>
+<span class="cm"> * language definition file for a Sass mixin</span>
+<span class="cm"> * http://sass-lang.com/documentation/file.SASS_REFERENCE.html#mixins</span>
+<span class="cm"> *</span>
+<span class="cm"> * @module lib/lang/defs/def_mixin</span>
+<span class="cm"> */</span>
+
+<span class="kd">var</span> <span class="nx">_sd</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;../../env/const&#39;</span><span class="p">),</span>
+    <span class="nx">definitionBase</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./_def&#39;</span><span class="p">).</span><span class="nx">definitionBase</span><span class="p">;</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * @constuctor</span>
+<span class="cm"> */</span>
+<span class="kd">function</span> <span class="nx">_lang_def</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="cm">/* implement base */</span>
+    <span class="nx">definitionBase</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="p">{</span>
+        <span class="nx">type_def</span><span class="o">:</span> <span class="s1">&#39;mixin&#39;</span><span class="p">,</span>
+        <span class="nx">value</span><span class="o">:</span> <span class="mi">64</span><span class="p">,</span> <span class="c1">//@</span>
+        <span class="nx">name_position</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="nx">context</span><span class="o">:</span> <span class="nx">_sd</span><span class="p">.</span><span class="nx">CONTEXT</span><span class="p">.</span><span class="nx">FIRST_CLASS</span><span class="p">,</span>
+        <span class="nx">canHaveValue</span><span class="o">:</span> <span class="nx">_sd</span><span class="p">.</span><span class="nx">VALIDATION</span><span class="p">.</span><span class="nx">REQUIRED</span><span class="p">,</span>
+        <span class="nx">canHaveDescription</span><span class="o">:</span> <span class="nx">_sd</span><span class="p">.</span><span class="nx">VALIDATION</span><span class="p">.</span><span class="nx">OPTIONAL</span><span class="p">,</span>
+        <span class="nx">canHaveMeta</span><span class="o">:</span>  <span class="nx">_sd</span><span class="p">.</span><span class="nx">VALIDATION</span><span class="p">.</span><span class="nx">OPTIONAL</span>
+
+    <span class="p">});</span>
+
+    <span class="cm">/* definitions must implement validate */</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">validate</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="p">};</span>
+
+
+<span class="cm">/** exports */</span>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">_lang_def</span><span class="p">();</span>
+</pre>
+                    </td>
+                </tr>
+                </table>
+            </div>
+
+        </div>
+
+        <!-- oocss -->
+        <div class="bs-docs-section">
+            <h3 id="oocss">OOCSS Naming Conventions</h3>
+
+            <p>With the <code>--prefix</code> option, sassdocJs will parse and group your files according to word prefix entries placed in <code>lib/lang/prefix.js</code>.
+             I've included SMACSS-ish entries, but anything can be supplied.</p>
+
+            <div class="highlight">
+                <table class="highlighttable">
+                    <tr>
+                        <td class="linenos">
+                            <div class="linenodiv">
+<pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre>                      </div>
+                        </td>
+                        <td class="code"><pre><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+
+	<span class="cm">// smacss</span>
+	<span class="s1">'m-'</span>    <span class="o">:</span>   <span class="s1">'module'</span><span class="p">,</span>
+	<span class="s1">'l-'</span>    <span class="o">:</span>   <span class="s1">'layout'</span><span class="p">,</span>
+	<span class="s1">'s-'</span>    <span class="o">:</span>   <span class="s1">'state'</span><span class="p">,</span>
+	<span class="s1">'is-'</span>   <span class="o">:</span>   <span class="s1">'state'</span>
+
+<span class="p">};</span>
+</pre>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <p class="gicon"><i aria-hidden="true" class="icon-point-of-interest"></i><span>The prefixed grouping is called 'category' in the docs</span></p>
+
+            <div class="bs-callout bs-callout-info oocss-callout">
+                <h4>More info</h4>
+                <p>
+                    A few resources regarding OOCSS-style naming:
+                    <br />
+                    <a href="http://smacss.com/">SMACSS.com</a>
+                    <a href="http://railslove.com/blog/2012/11/09/taking-sass-to-the-next-level-with-smurf-and-extend" _target="_blank">
+                        Taking Sass to the Next Level with SMURF and @extend
+                    </a>
+                    <a href="http://blog.kaelig.fr/post/48196348743/fifty-shades-of-bem" target="_blank">Fifty Shades of BEM</a>
+
+                </p>
+            </div>
+        </div>
+
+        <!-- usedin -->
+        <div class="bs-docs-section">
+            <h3 id="usedin">Use Location</h3>
+
+             <p>You can provide an <code>@usedin</code> entry in your comment block with a comma-separated value of locations (e.g. header, shopping cart, home page).
+             sassdocJs will include that as a grouping option in the generated docs.</p>
+
+            <p class="gicon"><i aria-hidden="true" class="icon-location-arrow"></i><span>The use location grouping is called 'used' in the docs</span></p>
+        </div>
+
+        <!-- templates -->
+        <div class="bs-docs-section">
+            <h3 id="template">Template</h3>
+
+            <p>
+                The included Handlebars template is pretty straight-forward.  It uses the generated <code>sassdoc-data.js</code> as it's data
+                source.  I've included some rudimentary themeing ability which you can find in the <code>./Sass</code> directory.  See one of
+                the existing theme files for reference.
+            </p>
+
+             <div class="bs-callout bs-callout-info">
+                <p>
+                    If you do customize, you'll want to run <code>$grunt build</code> in the template directory to compile the Sass and move it to the build folder.
+                </p>
+            </div>
+
+
+
+
+        </div>
+
+        <!-- test -->
+        <div class="bs-docs-section">
+            <h3 id="test">Test</h3>
+
+            <p>You can run the included test with make or grunt:</p>
+
+            <div class="well well-sm">
+                <pre><code>$make / $grunt test</code></pre>
+            </div>
+
+            <div class="bs-callout bs-callout-info" >
+                <p>Additional fixtures can be put in <code>parse.spec.js</code></p>
+            </div>
+        </div>
+
+        <!-- examples -->
+        <div class="bs-docs-section">
+            <h3 id="examples">Examples</h3>
+            <p>
+                For eample useage, please see the commented Sass source and Yaml config file in <code>./example</code>.
+            </p>
+        </div>
+
+        <!-- issues -->
+        <div class="bs-docs-section">
+            <h3 id="issues">Known Issues</h3>
+            <p>
+                <sup>*</sup>I went with jsDoc-style comments for the simple reason that I prefer them to the Sass <code>//</code> variety.
+                The (obvious) drawback is that the Sass compiler won't strip these out upon compilation.  I've got some ideas in mind
+                for this on the roadmap, but please contribute if you wish.  I also decided to eschew support for the older
+                syntax style (.sass). Feel free to fork the repo and add it.
+            </p>
+
+            <p>This is 0.0.1 code so please get in touch with any issues you encounter.</p>
+        </div>
+
+        <!-- roadmap -->
+        <div class="bs-docs-section">
+            <h3 id="roadmap">Roadmap</h3>
+
+            <p>Following is what's planned.</p>
+            <ul class="doclist">
+                <li><div class="cc">Add support for standard Sass <code>//</code> comment blocks.</div></li>
+                <li><div class="cc">Ability to strip sassdocJs comment blocks <code>//* */</code> on save so they don't end up in the pre-compiled Sass files.</div></li>
+                <li><div class="cc">Move name prefixing setting to config file.</div></li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+<footer class="bs-footer" role="contentinfo">
+    <div class="container footcontain">
+        <div class="footer-content">
+            <div class="bs-social">
+                <ul class="bs-social-buttons">
+                    <li><a href="https://github.com/mattbieber" alt="github"><i aria-hidden="true" class="icon-github s-github"></i></a></li>
+                <li><a href="https://twitter.com/_mattbieber" alt="twitter"><i aria-hidden="true" class="icon-twitter s-twitter"></i></a></li>
+                <li><a href="mailto:matt@daftscholars.com" alt="email"><i aria-hidden="true" class="icon-mail s-email"></i></a></li>
+                <li><a href="http://daftscholars.com" alt="daftscholars.com"><i aria-hidden="true" class="icon-earth s-web"></i></a></li>
+
+                </ul>
+            </div>
+            <p>Copyright (c) 2013 Matt Bieber <a href="http://twitter.com/_mattbieber" target="_blank">@_mattbieber</a></p>
+            <p>Licensed under <a href="http://opensource.org/licenses/MIT" target="_blank">The MIT License (MIT)</a>.</p>
+        </div>
+        <div class="footer-logos">
+            <a href="http://http://sass-lang.com/"><img class="footer-sass" src="images/sass.png" alt="sass"/></a>
+<!--             <a href="http://http://nodejs.org/"><img class="footer-node" src="images/node.png" alt="nodejs"/></a>
+ -->
+        </div>
+        <div class ="footer-footer">
+            <ul class="footer-links">
+                <li>Version 0.0.1</li>
+                <li class="muted">&middot;</li>
+                <li><a href="">Github repo</a></li>
+                <li class="muted">&middot;</li>
+                <li><a href="">Issues</a></li>
+
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<!-- JS and analytics only. -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="js/libs/underscore.js"></script>
+<script src="js/libs/jquery.scrollTo.js"></script>
+<script src="js/libs/jquery.nav.js"></script>
+<!-- <script src="js/libs/bootstrap.js"></script>
+ -->
+ <script src="js/libs/holder.js"></script>
+<script src="js/application.js"></script>
+
+</body>
+</html>

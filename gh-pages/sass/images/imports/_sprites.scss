@@ -1,0 +1,49 @@
+/* --|-----------------------------------------------------------------------
+   images.sprites
+   -------------------------------------------------------------------------- */
+
+$sprites-hash: first 0, second 1;
+
+/**
+* mixin for creating horizontal or vertical list of items
+* e.g. floated DIV or LI elemenents for navigation or grouping
+*
+* @param     $item-position {String} acceptable values are horizontal or vertical
+* @param     $style-position {Number} margin to apply to right (horizontal) or bottom (vertical)
+* @param     $image-file {Number} optional width
+* @param     $sprite-width {Number} optional if supplied this should be the number of total elements
+* @param     $sprite-height {Bool} use float vs. inline-block
+* @example
+*   background: sprite(24px, gray, mapicon);
+*   &:hover {
+*     background: sprite(24px, orange, mapicon);
+*   }
+*/
+@function make-sprite($size: 32px, $color: black, $name: none, $placement: left, $index-only: false) {
+    $image: transparent url("/Content/Images/sprites-#{$size}.png") no-repeat;
+    $offset: $size;
+    $icon-multipliers: black 0, gray 1, orange 2;
+    $multiplier: 1;
+    @each $m in $icon-multipliers {
+        @if $color == nth($m, 1) {
+            $multiplier: nth($m, 2);
+        }
+    }
+    $position: -1;
+    @each $s in $sprites-hash {
+        @if $name == nth($s, 1) {
+            $position: nth($s, 2);
+        }
+    }
+    $p: $position - 1;
+    $a: $offset * 2;
+    $x: $a * $p;
+    $y: $a * $sprite-count * $multiplier;
+    $z: ($y + $x) * -1;
+    @if $index-only == true {
+        @return $z;
+    }
+    @else {
+        @return $image 0px $z;
+    }
+}

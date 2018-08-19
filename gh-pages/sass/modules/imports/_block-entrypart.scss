@@ -1,0 +1,35 @@
+/* ==|=======================================================================
+   modules.blocks.section
+   ========================================================================== */
+
+
+.m-entry-part {
+    width:  100%;
+    margin: 10px 0px;
+    @include at-size($s) {
+        margin-bottom: 20px;
+    }
+
+
+    h3 {
+        font: font-config(1.3em, 700, $family: $font-head-family);
+        margin: 10px 0px;
+    }
+
+    .table {
+        thead {
+            border-bottom: 2px solid $color-a-epsilon;
+        }
+
+        th,td {
+            text-align: left;
+        }
+
+        .line-name { width: 20%; }
+        .line-type { width: 30%; }
+        .line-description { width: 50%; }
+
+    }
+
+}
+

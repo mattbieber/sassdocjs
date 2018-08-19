@@ -1,0 +1,78 @@
+/* ==|=======================================================================
+   colors.extensions
+   ========================================================================== */
+
+/* 
+   properties necessary for responsive images
+   @usage:
+   @extend %m-image-responsive;
+   ---------------------------------------------------------- */
+@function makecolor($color) {
+  @return #{'#' + $color};
+
+}
+
+/* 
+   properties necessary for responsive images
+   @usage:
+   @extend %m-image-responsive;
+   ---------------------------------------------------------- */
+// produce transparent colour in IE6 – 8. e.g.
+// expects Moderizer .ie6, .ie7, .ie8 …
+// div {
+// @include ie-background-color(hsla(248,65%,20%,0.4));
+// }
+//
+// .ie8 div {
+// background: transparent;
+// -ms-filter: “progid:DXImageTransform.Microsoft.gradient(startColorstr=#661B1254,endColorstr=#661B1254)”;
+// zoom: 1; }
+// .ie6 div, .ie7 div {
+// background: transparent;
+// filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#661B1254,endColorstr=#661B1254);
+// zoom: 1; }
+@mixin ie-background-color($color) {
+  @if opacity($color) == 1 {
+    background: $color;
+  } @else {
+    $a: number-to-hex(floor(opacity($color) * 255));
+    $r: number-to-hex(red($color));
+    $g: number-to-hex(green($color));
+    $b: number-to-hex(blue($color));
+
+    $argb: "#" + $a + $r + $g + $b;
+    .ie8 & {
+      background: transparent;
+      -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$argb},endColorstr=#{$argb});
+    zoom: 1;
+  }
+  .ie6 & , .ie7 & {
+    background: transparent; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$argb},endColorstr=#{$argb});
+    zoom: 1;
+  }
+}
+  }
+
+/* 
+   properties necessary for responsive images
+   @usage:
+   @extend %m-image-responsive;
+   ---------------------------------------------------------- */
+// Background RGBA
+// Creates a cross-browser rgba background color.
+// ---------------------------------------------------------
+@mixin background-rgba($red: 0, $green: 0, $blue: 0, $alpha: 1.0) {
+  background-color: rgb($red, $green, $blue);
+  background-color: rgba($red, $green, $blue, $alpha);
+
+  @if ($legacy-support-for-ie) {
+    @include has-layout;
+    background-color: transparent\9;
+    $color: rgba($red, $green, $blue, $alpha);
+    @include filter-gradient($color, $color);
+  }
+}
+
+
+
+

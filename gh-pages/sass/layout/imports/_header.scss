@@ -1,0 +1,36 @@
+/* ==|=======================================================================
+   layout.header
+   ========================================================================== */
+$header-banner-height:                    101px;
+$header-banner-height-m:                  76px;
+$header-navmobile-width:                  206px;
+$header-navmobile-offset:                 300px;
+$header-nav-height:                       24px;
+
+// --------------------------------------
+
+
+.l-header {
+  @extend %l-cleared-container-overflow-visible;
+  @extend %l-cleared-container;
+  @extend %l-containment;
+   
+  @include at-size($l) {
+      //max-width: 90%;
+  }
+
+  @include at-size($s) {
+      max-width: 100%;
+  }
+  
+  .l-header-banner {
+    @extend %l-cleared-container;
+    height: $header-banner-height;
+
+    @include at-size($s) {
+      height: $header-banner-height-m;
+    }
+  }
+}
+
+    

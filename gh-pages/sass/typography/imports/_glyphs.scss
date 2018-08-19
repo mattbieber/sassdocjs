@@ -1,0 +1,257 @@
+
+@font-face {
+    font-family: 'glyphs';
+    src:url('../fonts/glyphs.eot');
+    src:url('../fonts/glyphs.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/glyphs.woff') format('woff'),
+        url('../fonts/glyphs.ttf') format('truetype'),
+        url('../fonts/glyphs.svg#glyphs') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'glyphs';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+.icon-location-arrow:before {
+    content: "\e600";
+}
+.icon-point-of-interest:before {
+    content: "\e601";
+}
+.icon-sassdoc:before {
+    content: "\e602";
+}
+.icon-googleplus:before {
+    content: "\e603";
+}
+.icon-twitter:before {
+    content: "\e604";
+}
+.icon-mail:before {
+    content: "\e605";
+}
+.icon-facebook:before {
+    content: "\e606";
+}
+.icon-github:before {
+    content: "\e607";
+}
+.icon-earth:before {
+    content: "\e608";
+}
+/* Effect 1 */
+.hi-icon-effect-1 .hi-icon {
+    background: rgba(255,255,255,0.1);
+    -webkit-transition: background 0.2s, color 0.2s;
+    -moz-transition: background 0.2s, color 0.2s;
+    transition: background 0.2s, color 0.2s;
+}
+
+.hi-icon-effect-1 .hi-icon:after {
+    top: -7px;
+    left: -7px;
+    padding: 7px;
+    box-shadow: 0 0 0 4px #fff;
+    -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+    -webkit-transform: scale(.8);
+    -moz-transition: -moz-transform 0.2s, opacity 0.2s;
+    -moz-transform: scale(.8);
+    -ms-transform: scale(.8);
+    transition: transform 0.2s, opacity 0.2s;
+    transform: scale(.8);
+    opacity: 0;
+}
+
+.hi-icon-wrap .active {
+    background: rgba(255,255,255,1);
+    color: #41ab6b;
+
+}
+/* Effect 1a */
+.no-touch .hi-icon-effect-1a .hi-icon:hover {
+    background: rgba(255,255,255,1);
+    color: #41ab6b;
+}
+
+.no-touch .hi-icon-effect-1a .hi-icon:hover:after {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* Effect 1b */
+.no-touch .hi-icon-effect-1b .hi-icon:hover {
+    background: rgba(255,255,255,1);
+    color: #41ab6b;
+}
+
+.hi-icon-effect-1b .hi-icon:after {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.no-touch .hi-icon-effect-1b .hi-icon:hover:after {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+}
+
+@-webkit-keyframes sonarEffect {
+    0% {
+        opacity: 0.3;
+    }
+    40% {
+        opacity: 0.5;
+        box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #3851bc, 0 0 0 10px rgba(255,255,255,0.5);
+    }
+    100% {
+        box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #3851bc, 0 0 0 10px rgba(255,255,255,0.5);
+        -webkit-transform: scale(1.5);
+        opacity: 0;
+    }
+}
+@-moz-keyframes sonarEffect {
+    0% {
+        opacity: 0.3;
+    }
+    40% {
+        opacity: 0.5;
+        box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #3851bc, 0 0 0 10px rgba(255,255,255,0.5);
+    }
+    100% {
+        box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #3851bc, 0 0 0 10px rgba(255,255,255,0.5);
+        -moz-transform: scale(1.5);
+        opacity: 0;
+    }
+}
+@keyframes sonarEffect {
+    0% {
+        opacity: 0.3;
+    }
+    40% {
+        opacity: 0.5;
+        box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #3851bc, 0 0 0 10px rgba(255,255,255,0.5);
+    }
+    100% {
+        box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #3851bc, 0 0 0 10px rgba(255,255,255,0.5);
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* Effect 9 */
+.hi-icon-effect-9 .hi-icon {
+    -webkit-transition: box-shadow 0.2s;
+    -moz-transition: box-shadow 0.2s;
+    transition: box-shadow 0.2s;
+}
+
+.hi-icon-effect-9 .hi-icon:after {
+    top: 0;
+    left: 0;
+    padding: 0;
+    box-shadow: 0 0 0 3px #fff;
+    -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+    -moz-transition: -moz-transform 0.2s, opacity 0.2s;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+/* Effect 9a */
+.no-touch .hi-icon-effect-9a .hi-icon:hover:after {
+    -webkit-transform: scale(0.85);
+    -moz-transform: scale(0.85);
+    -ms-transform: scale(0.85);
+    transform: scale(0.85);
+    opacity: 0.5;
+}
+
+.no-touch .hi-icon-effect-9a .hi-icon:hover {
+    box-shadow: 0 0 0 10px rgba(255,255,255,1);
+    color: #fff;
+}
+
+/* Effect 9b */
+.no-touch .hi-icon-effect-9b .hi-icon:hover:after {
+    -webkit-transform: scale(0.85);
+    -moz-transform: scale(0.85);
+    -ms-transform: scale(0.85);
+    transform: scale(0.85);
+}
+
+.no-touch .hi-icon-effect-9b .hi-icon:hover {
+    box-shadow: 0 0 0 10px rgba(255,255,255,0.4);
+    color: #fff;
+}
+
+a:hover {
+    text-decoration: none;
+}
+#set-1 {
+    background: #41ab6b;
+
+}
+
+#set-2 {
+    background: #eea303;
+}
+
+#set-3 {
+    background: #f06060;
+}
+
+#set-4 {
+    background: #0e83cd;
+}
+
+#set-5 {
+    background: #702fa8;
+}
+
+#set-6 {
+    background: #64bb5d;
+}
+
+#set-7 {
+    background: #d54f30;
+}
+
+#set-8 {
+    background: #3851bc;
+}
+
+#set-9 {
+    background: #96a94b;
+}
+
+
+
+@media screen and (max-width: 800px) {
+
+    .hi-icon {
+        margin: 15px !important;
+    }
+
+    .container > section {
+        padding: 20em 1em;
+    }
+
+}

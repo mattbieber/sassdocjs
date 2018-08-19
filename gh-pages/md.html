@@ -1,0 +1,38 @@
+
+
+<h2 id="examples">Examples</h2>
+
+<pre class="prettyprint prettyprinted" style=""><code class="language-scss"><span class="com">/**
+ * @var {Number} number of sprites to expect in file
+ * @usedin header, shopping cart, sidebar
+ */</span><span class="pln">
+$sprite</span><span class="pun">-</span><span class="pln">count</span><span class="pun">:</span><span
+        class="pln">                          </span><span class="lit">23</span><span class="pun">;</span></code></pre>
+
+<pre class="prettyprint prettyprinted" style=""><code class="language-scss"><span class="com">/**                                      0
+* Creates a repeated border from an image
+*
+* @param      $location {String} acceptable values are horizontal or vertical
+* @param      $color {String|Color} a string or hex/rgba color value to use for the border
+* @param      $background-image {String} a background image url
+*
+* @returns {Style} bordered left content
+* @example
+*   makeborder($lastname: something);
+*/</span><span class="pln">
+</span><span class="lit">@function</span><span class="pln"> makeborder</span><span class="pun">(</span><span
+        class="pln">$location</span><span class="pun">,</span><span class="pln">
+                     $color</span><span class="pun">:</span><span class="pln"> transparent</span><span
+        class="pun">,</span><span class="pln">
+                     $background</span><span class="pun">-</span><span class="pln">image</span><span
+        class="pun">:</span><span class="pln"> none</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+  </span><span class="lit">@return</span><span class="pln"> $color $background</span><span class="pun">-</span><span
+        class="pln">image repeat</span><span class="pun">-</span><span class="pln">x $location</span><span
+        class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+<h2 id="roadmap-known-issues">Roadmap &amp; Known Issues</h2>
+
+<p>I decided to eschew support for the older syntax style (.sass). Feel free to <a href="http://">fork</a> the repo and
+    add it.</p>

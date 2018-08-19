@@ -1,0 +1,39 @@
+.l-sidebar {
+position: relative;
+
+}
+.l-nav-sidebar {
+	clear: both;
+    position: fixed;
+    top: 0;
+    left: 0;
+    borrom: 0;
+    z-index: 100;
+    width: 420px;
+    height: 100%;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.l-nav-toc {
+	position:absolute;
+    top:0;
+    left:120px;
+    bottom: 0;
+    width:300px;
+    overflow: hidden; 
+
+
+  height: 100%;
+}
+
+
+.l-nav-menu {
+    position: fixed;
+    top:0;
+    left:0;
+    bottom: 0;
+    width:120px;
+    overflow: hidden; 
+     
+ }
